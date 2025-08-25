@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jersey Boys Roofing | Trusted Roofing Contractors in North & Central NJ</title>
+    <meta name="description" content="Jersey Boys Roofing offers expert roof repair, replacement, and emergency services in North & Central New Jersey. Licensed, insured, with 500+ 5-star reviews.">
+    <meta property="og:title" content="Jersey Boys Roofing - Professional Roofing Services in NJ">
+    <meta property="og:description" content="Best prices guaranteed. 24/7 emergency response. Free inspections. Serving Newark, Jersey City, Edison, and more.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://jerseyboysroofing.com/images/hero-roof.jpg">
+    <link rel="canonical" href="https://jerseyboysroofing.com">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo svg {
+            height: 45px;
+            width: auto;
+        }
+
+        .nav-menu {
+            display: none;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .nav-menu {
+                display: flex;
+            }
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #1e5aab;
+        }
+
+        .nav-cta {
+            background: #1e5aab;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .nav-cta:hover {
+            background: #164585;
+        }
+
+        .mobile-menu-btn {
+            display: block;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .mobile-menu-btn {
+                display: none;
+            }
+        }
+
+        .mobile-menu-btn span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: #333;
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            background: linear-gradient(rgba(30, 90, 171, 0.7), rgba(30, 90, 171, 0.7)),
+                        url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1920&q=80') center/cover;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+            width: 100%;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        @media (min-width: 992px) {
+            .hero-content {
+                grid-template-columns: 1fr 400px;
+                gap: 4rem;
+            }
+        }
+
+        .hero-text {
+            color: white;
+        }
+
+        .hero-text h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-text p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-orange {
+            background: #f97316;
+            color: white;
+        }
+
+        .btn-orange:hover {
+            background: #ea580c;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #1e5aab;
+        }
+
+        /* Quote Form */
+        .quote-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .quote-form h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .quote-form p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #1e5aab;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: #f97316;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #ea580c;
+        }
+
+        /* Stats Section */
+        .stats {
+            background: #f8f9fa;
+            padding: 3rem 0;
+        }
+
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .stats-container {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .stat-item h3 {
+            font-size: 2.5rem;
+            color: #f97316;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item p {
+            color: #666;
+            text-transform: uppercase;
+            font-size: 0.875rem;
+            letter-spacing: 1px;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .services-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .eyebrow {
+            color: #f97316;
+            text-transform: uppercase;
+            font-size: 0.875rem;
+            letter-spacing: 2px;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: #1e5aab;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: #666;
+            font-size: 1.125rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .service-card {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+
+        .service-card:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: #f97316;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            color: #1e5aab;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .service-price {
+            font-weight: 600;
+            color: #333;
+            font-size: 1.125rem;
+        }
+
+        /* Content Section */
+        .content-section {
+            padding: 4rem 0;
+            background: #f8f9fa;
+        }
+
+        .content-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .content-section h2 {
+            font-size: 2rem;
+            color: #1e5aab;
+            margin-bottom: 1.5rem;
+        }
+
+        .content-section h3 {
+            font-size: 1.5rem;
+            color: #1e5aab;
+            margin: 2rem 0 1rem;
+        }
+
+        .content-section p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .highlight-box {
+            background: white;
+            padding: 2rem;
+            border-left: 4px solid #f97316;
+            border-radius: 5px;
+            margin: 2rem 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .highlight-box h3 {
+            color: #1e5aab;
+            margin-bottom: 1rem;
+        }
+
+        /* CTA Section */
+        .cta {
+            background: #1e5aab;
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: #999;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-content {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .footer-section h4 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: #999;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 1px solid #333;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+                    <!-- NJ State Shape -->
+                    <path d="M50 40 L70 35 L75 40 L80 35 L85 30 L90 35 L92 40 L95 45 L98 50 L100 55 L102 60 L104 65 L105 70 L106 75 L107 80 L108 85 L109 90 L110 95 L109 100 L108 105 L106 110 L104 115 L102 120 L100 125 L98 130 L95 135 L92 140 L90 145 L85 150 L80 155 L75 160 L70 165 L65 160 L60 155 L55 150 L52 145 L50 140 L48 135 L46 130 L44 125 L42 120 L40 115 L38 110 L36 105 L35 100 L34 95 L35 90 L36 85 L37 80 L38 75 L39 70 L40 65 L42 60 L44 55 L46 50 L48 45 L50 40" fill="#1e88e5"/>
+                    <!-- Company Name -->
+                    <text x="150" y="90" font-family="Arial Black, sans-serif" font-size="60" font-weight="900" fill="#1a365d">JERSEY BOYS</text>
+                    <!-- Divider Lines -->
+                    <line x1="150" y1="110" x2="280" y2="110" stroke="#1e88e5" stroke-width="3"/>
+                    <line x1="550" y1="110" x2="680" y2="110" stroke="#1e88e5" stroke-width="3"/>
+                    <!-- ROOFING Text -->
+                    <text x="300" y="135" font-family="Arial, sans-serif" font-size="36" font-weight="600" fill="#1e88e5" letter-spacing="6">ROOFING</text>
+                </svg>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#areas">Areas Served</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <a href="tel:7325557663" class="nav-cta">Call Now: (732) 555-ROOF</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Expert Roofing Services in North & Central New Jersey</h1>
+                    <p>Licensed, insured contractors with 500+ 5-star reviews. Best prices guaranteed and 24/7 emergency response.</p>
+                    <div class="hero-buttons">
+                        <a href="tel:7325557663" class="btn btn-orange">Get Emergency Help Now</a>
+                        <a href="#inspection" class="btn btn-outline">Schedule Free Inspection</a>
+                    </div>
+                </div>
+                <div class="quote-form">
+                    <h2>Request a Free Quote</h2>
+                    <p>Our team will respond within 60 seconds.</p>
+                    <form id="quote-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <select id="city" name="city" required>
+                                <option value="">Select City</option>
+                                <option>Newark</option>
+                                <option>Jersey City</option>
+                                <option>Edison</option>
+                                <option>Woodbridge</option>
+                                <option>Toms River</option>
+                                <option>Princeton</option>
+                                <option>New Brunswick</option>
+                                <option>Trenton</option>
+                                <option>Elizabeth</option>
+                                <option>Paterson</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Needed</label>
+                            <select id="service" name="service" required>
+                                <option value="">Select Service</option>
+                                <option>Emergency Leak Repair</option>
+                                <option>Storm Damage</option>
+                                <option>Full Replacement</option>
+                                <option>Free Inspection</option>
+                                <option>Insurance Claim</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="submit-btn">Submit Request</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-item">
+                <h3>17,842</h3>
+                <p>Roofs Repaired</p>
+            </div>
+            <div class="stat-item">
+                <h3>$4.2M</h3>
+                <p>Insurance Saved</p>
+            </div>
+            <div class="stat-item">
+                <h3>45 Min</h3>
+                <p>Avg Response Time</p>
+            </div>
+            <div class="stat-item">
+                <h3>100%</h3>
+                <p>Satisfaction Guarantee</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="services-container">
+            <div class="section-header">
+                <span class="eyebrow">OUR SERVICES</span>
+                <h2>Comprehensive Roofing Solutions</h2>
+                <p>From emergency repairs to complete replacements, we provide reliable services tailored to your needs.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">⚠️</div>
+                    <h3>24/7 Emergency Repair</h3>
+                    <p>On-site in 60 minutes or less throughout North and Central Jersey.</p>
+                    <div class="service-price">From $299</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🌩️</div>
+                    <h3>Storm Damage Repair</h3>
+                    <p>Expert assessment and direct insurance coordination.</p>
+                    <div class="service-price">Insurance Covered</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏠</div>
+                    <h3>Full Roof Replacement</h3>
+                    <p>Lifetime warranty and best price guarantee.</p>
+                    <div class="service-price">From $4,999</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔍</div>
+                    <h3>Free Inspections</h3>
+                    <p>Detailed 21-point inspection with report and photos.</p>
+                    <div class="service-price">Free</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📋</div>
+                    <h3>Insurance Claims</h3>
+                    <p>Full handling from documentation to negotiation.</p>
+                    <div class="service-price">No Cost</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🛡️</div>
+                    <h3>Maintenance Plans</h3>
+                    <p>Annual service to extend roof life.</p>
+                    <div class="service-price">From $199/year</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="content-container">
+            <h2>New Jersey's Most Trusted Roofing Contractor Since 2005</h2>
+            
+            <p>When your roof needs repair or replacement in New Jersey, you need a roofing contractor you can trust. Jersey Boys Roofing has been the Garden State's premier roofing company for nearly two decades, serving homeowners from the bustling streets of Newark to the suburban neighborhoods of Princeton, from the Jersey Shore communities of Toms River to the capital region of Trenton.</p>
+            
+            <p>What sets Jersey Boys apart from other roofing contractors near me? It's simple: we deliver the best prices and the best service, period. While other roofing companies near me might quote you one price and deliver another, we guarantee our prices are the lowest in New Jersey - or we'll beat any written estimate by 10%. Our commitment to transparency and value has earned us over 500 five-star reviews from satisfied customers across North and Central Jersey.</p>
+            
+            <div class="highlight-box">
+                <h3>Why Jersey Boys Is Different</h3>
+                <p>Unlike other roofing contractors, we maintain crews throughout the region - not subcontractors, but actual Jersey Boys employees who are licensed, insured, and trained to our exacting standards. This means when you call for emergency roof repair, you're getting experienced professionals who know New Jersey's unique weather challenges and building codes.</p>
+            </div>
+            
+            <h3>Comprehensive Roofing Services Across the Garden State</h3>
+            
+            <p>As a full-service roofing company, Jersey Boys handles everything from minor roof repairs to complete roof replacement. Our services include emergency roof repair (available 24/7), storm damage assessment and repair, insurance claim assistance, preventive maintenance, and new roof installation. Whether you need roofing contractors for a small leak or a complete roof replacement near me, we've got you covered.</p>
+            
+            <p>Our emergency response team is legendary throughout New Jersey. When storms hit - and they hit hard in the Garden State - we're the roofing company near me that actually shows up. From nor'easters pounding the coast to summer thunderstorms wreaking havoc in North Jersey, we're on-site in 60 minutes or less, guaranteed. If we don't make it in time, your emergency repair is free.</p>
+            
+            <h3>Roofing Expertise for Every New Jersey Home</h3>
+            
+            <p>New Jersey homes face unique challenges. The salt air near the Shore accelerates shingle deterioration. The freeze-thaw cycles in North Jersey create ice dams. The humid summers throughout Central Jersey promote algae growth. Jersey Boys Roofing understands these regional challenges because we're from here - born and raised in the Garden State.</p>
+            
+            <p>Our expertise covers all roofing materials popular in New Jersey: asphalt shingles (the most common choice for NJ homes), architectural shingles for enhanced curb appeal, metal roofing for longevity, slate and tile for historic homes, flat roofing for commercial properties, and TPO and EPDM for modern efficiency. Whatever your roof repair near me needs, we have the expertise and experience to deliver exceptional results.</p>
+            
+            <div class="highlight-box">
+                <h3>Insurance Claims Made Easy</h3>
+                <p>Dealing with insurance after roof damage can be overwhelming. That's why Jersey Boys handles everything - from initial inspection to final settlement. We document all damage, negotiate with adjusters, and ensure you receive maximum coverage. Most of our customers pay nothing out of pocket for storm damage repairs.</p>
+            </div>
+            
+            <h3>Serving Every Community in North and Central New Jersey</h3>
+            
+            <p>Our service area covers the most populated regions of New Jersey. In North Jersey, we serve Newark, Jersey City, Paterson, Elizabeth, Clifton, Passaic, Union City, Bayonne, East Orange, and all surrounding communities. Our Central Jersey coverage includes Edison, Woodbridge, New Brunswick, Piscataway, Perth Amboy, Plainfield, Sayreville, North Brunswick, and beyond.</p>
+            
+            <p>Along the Shore and inland Ocean County, we're the preferred roofing contractors for Lakewood, Toms River, Brick Township, Jackson, Howell, Manalapan, Marlboro, and Freehold. In the capital region, we serve Trenton, Hamilton, Princeton, Lawrence, Ewing, West Windsor, East Windsor, and Hightstown.</p>
+            
+            <p>No matter where you are in our service area, when you search for "roofing companies near me" or "roof repair near me," Jersey Boys Roofing is ready to respond with the same commitment to quality and value that has made us New Jersey's most trusted roofing contractor.</p>
+            
+            <h3>The Jersey Boys Difference: Best Prices, Best Service</h3>
+            
+            <p>In an industry plagued by fly-by-night contractors and storm chasers, Jersey Boys Roofing stands as a beacon of reliability and integrity. We're not the roofing company that disappears after the check clears. We're your neighbors, serving the community we call home. Our roots run deep in New Jersey soil, from our headquarters to our crews stationed throughout the state.</p>
+            
+            <p>Our pricing transparency is unmatched among roofing contractors near me. Every quote is detailed, written, and guaranteed. No hidden fees, no surprise charges, no bait-and-switch tactics. Just honest, fair pricing that beats everyone else in the market. How do we do it? Simple: we run an efficient operation, maintain long-term supplier relationships, and believe in volume over margins. We'd rather be the roofing company that fixes 100 roofs at a fair price than 10 roofs at an inflated price.</p>
+            
+            <h3>Emergency Roofing Services When You Need Them Most</h3>
+            
+            <p>Roof emergencies don't wait for business hours. That's why Jersey Boys Roofing offers true 24/7 emergency service. Not an answering service that takes a message, but actual crews ready to respond at 2 AM on a Sunday or during a holiday storm. When you need roof repair near me RIGHT NOW, we're the roofing contractors who actually show up.</p>
+            
+            <p>Our emergency response protocol is simple: you call, we dispatch immediately, arrive within 60 minutes, assess and contain the damage, provide temporary or permanent repair, and document everything for insurance. No emergency fees, no overtime charges, just the same fair prices we offer during regular hours.</p>
+            
+            <h3>Quality Roofing Materials and Expert Installation</h3>
+            
+            <p>As a GAF Master Elite contractor (only 2% of roofing companies achieve this status), Jersey Boys Roofing has access to the best materials and warranties in the industry. We're also certified installers for Owens Corning, CertainTeed, and other major manufacturers. This means when you choose us as your roofing contractor, you're getting premium materials, expert installation, and warranties that actually protect your investment.</p>
+            
+            <p>Our installation process exceeds New Jersey building codes and manufacturer specifications. We don't cut corners to save time or increase profits. Every roof replacement includes complete deck inspection, proper ventilation assessment, ice and water shield installation, high-quality underlayment, precision shingle application, and thorough cleanup. When other roofing companies near me are done in a day and gone, we're ensuring every detail is perfect.</p>
+            
+            <div class="highlight-box">
+                <h3>Financing Available</h3>
+                <p>We understand that roof replacement is a major investment. That's why Jersey Boys offers flexible financing options with approved credit. Low monthly payments, no prepayment penalties, and fast approval make it easy to get the roof you need now.</p>
+            </div>
+            
+            <h3>Preventive Maintenance: Protect Your Investment</h3>
+            
+            <p>The best roof repair is the one you never need. Our preventive maintenance programs help New Jersey homeowners extend their roof's life by 10-15 years. Annual inspections catch small problems before they become expensive repairs. Regular cleaning prevents algae and moss damage. Minor repairs stop leaks before they start.</p>
+            
+            <p>For less than $200 per year, our maintenance plan includes annual inspection, gutter cleaning, minor repairs (up to $500 value), priority emergency service, and 10% discount on major repairs. It's the smartest investment you can make in your home's protection.</p>
+            
+            <h3>Storm Damage Specialists</h3>
+            
+            <p>New Jersey weather is unpredictable and often severe. From coastal storms and hurricanes to inland tornadoes and microbursts, from winter nor'easters to summer hail storms, your roof faces constant challenges. Jersey Boys Roofing specializes in storm damage assessment and repair.</p>
+            
+            <p>We understand the urgency of storm damage. That's why we maintain the largest emergency response fleet among roofing contractors in New Jersey. When storms hit, we mobilize all crews to ensure every customer gets timely service. We work directly with insurance adjusters, document all damage thoroughly, and ensure you receive full coverage for repairs.</p>
+            
+            <h3>Commercial Roofing Services</h3>
+            
+            <p>While residential roofing is our primary focus, Jersey Boys also serves commercial properties throughout North and Central Jersey. From small retail shops to large warehouses, from office buildings to apartment complexes, we handle commercial roofing with the same commitment to quality and value.</p>
+            
+            <p>Our commercial services include flat roof repair and replacement, TPO and EPDM installation, emergency leak repair, preventive maintenance contracts, and roof coating applications. We work around your business schedule to minimize disruption and maintain safe work sites that comply with OSHA requirements.</p>
+            
+            <h3>Understanding Your Roof's Warning Signs</h3>
+            
+            <p>Knowing when your roof needs attention can save thousands in repairs. Jersey Boys Roofing educates homeowners about critical warning signs: water stains on ceilings indicate active leaks, missing or curled shingles expose your home to water damage, granules in gutters signal aging shingles, daylight through roof boards means immediate repair is needed, and sagging areas indicate structural problems requiring professional assessment.</p>
+            
+            <p>Don't ignore these warning signs. What starts as a minor issue can quickly escalate into major damage. A small leak today becomes rotted decking tomorrow, mold growth next week, and structural damage next month. Jersey Boys offers free inspections to catch problems early, potentially saving you thousands in unnecessary repairs.</p>
+            
+            <h3>The True Cost of Cheap Roofing</h3>
+            
+            <p>We've all seen the ads - "Complete Roof Replacement $2,999!" These too-good-to-be-true offers usually are. Cheap roofing contractors cut corners that cost you dearly: inferior materials that fail prematurely, improper installation voiding manufacturer warranties, no insurance leaving you liable for accidents, hidden fees that double the quoted price, and disappearing acts when problems arise.</p>
+            
+            <p>Jersey Boys Roofing believes in fair, transparent pricing. Our quotes include everything - materials, labor, permits, cleanup, and warranty. No surprises, no hidden fees, no corners cut. We're not the cheapest because we're the best value. Our work lasts longer, our warranties mean something, and we're here when you need us.</p>
+            
+            <h3>Technology and Innovation in Roofing</h3>
+            
+            <p>Modern roofing has evolved far beyond hammers and nails. Jersey Boys Roofing embraces technology to deliver better results: drone inspections for safe, thorough assessments, thermal imaging to detect hidden moisture, digital documentation for insurance claims, project management software for scheduling and communication, and advanced materials for superior performance and longevity.</p>
+            
+            <p>Our crews receive continuous training on the latest techniques and materials. We're certified installers for solar-ready roofing systems, cool roof technologies that reduce energy costs, and impact-resistant shingles that withstand severe weather. When you choose Jersey Boys, you're getting cutting-edge roofing solutions, not yesterday's technology.</p>
+            
+            <h3>Environmental Responsibility</h3>
+            
+            <p>Jersey Boys Roofing takes environmental responsibility seriously. We recycle old roofing materials whenever possible, diverting thousands of tons from landfills annually. Our cool roof options reduce urban heat island effects and lower energy consumption. We offer sustainable materials like recycled shingles and solar-integrated roofing systems.</p>
+            
+            <p>Energy-efficient roofing isn't just good for the environment - it's good for your wallet. Proper insulation and ventilation can reduce cooling costs by 20% or more. Reflective roofing materials decrease heat absorption, keeping your home cooler in summer. Many of our energy-efficient options qualify for tax credits and utility rebates, making them even more affordable.</p>
+            
+            <h3>Your Local Roofing Partner</h3>
+            
+            <p>When you search for "roofing contractors near me" or "roofing companies near me," you'll find dozens of options. But only Jersey Boys Roofing combines unbeatable prices, exceptional service, and true local expertise. We're not a franchise, not a corporation, just honest Jersey contractors who believe in doing right by our neighbors.</p>
+            
+            <p>From our first inspection to our lifetime warranty, we treat every customer like family. Because in New Jersey, reputation is everything. One bad job can ruin a company's name. That's why we've maintained our sterling reputation for nearly 20 years - by never compromising on quality, never overcharging, and always standing behind our work.</p>
+            
+            <p>Don't trust your home to out-of-state storm chasers or unlicensed contractors. Choose Jersey Boys Roofing - the roofing company near me that's actually near you, actually cares about you, and actually delivers on every promise. Call (732) 555-ROOF now for your free inspection and experience the Jersey Boys difference yourself.</p>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="cta-container">
+            <h2>Ready to Protect Your Home?</h2>
+            <p>Get your free inspection and guaranteed lowest price quote today.</p>
+            <div class="cta-buttons">
+                <a href="tel:7325557663" class="btn btn-orange">Call (732) 555-ROOF</a>
+                <a href="#quote-form" class="btn btn-outline">Get Quote Online</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Jersey Boys Roofing</h4>
+                <p>Serving NJ since 2005</p>
+                <p>(732) 555-ROOF<br>
+                info@jerseyboysroofing.com<br>
+                24/7 Emergency Service</p>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#">Emergency Repair</a></li>
+                    <li><a href="#">Roof Replacement</a></li>
+                    <li><a href="#">Storm Damage</a></li>
+                    <li><a href="#">Free Inspection</a></li>
+                    <li><a href="#">Insurance Claims</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Service Areas</h4>
+                <ul>
+                    <li><a href="#">Newark</a></li>
+                    <li><a href="#">Jersey City</a></li>
+                    <li><a href="#">Edison</a></li>
+                    <li><a href="#">Princeton</a></li>
+                    <li><a href="#">Toms River</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Reviews</a></li>
+                    <li><a href="#">Warranty</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Jersey Boys Roofing. All rights reserved. | License #13VH0123456 | Fully Insured | GAF Master Elite</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.querySelector('.nav-menu');
+            const spans = this.querySelectorAll('span');
+            
+            if (menu.style.display === 'flex') {
+                menu.style.display = 'none';
+                spans[0].style.transform = 'rotate(0)';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'rotate(0)';
+            } else {
+                menu.style.display = 'flex';
+                menu.style.position = 'absolute';
+                menu.style.top = '100%';
+                menu.style.left = '0';
+                menu.style.right = '0';
+                menu.style.background = 'white';
+                menu.style.flexDirection = 'column';
+                menu.style.padding = '1rem';
+                menu.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
+                
+                spans[0].style.transform = 'rotate(45deg) translateY(8px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translateY(-8px)';
+            }
+        });
+
+        // Form submission
+        document.getElementById('quote-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show success message
+            alert('Thank you! Our team will contact you within 60 seconds during business hours.');
+            
+            // Reset form
+            this.reset();
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
