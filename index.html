@@ -51,8 +51,14 @@
         }
 
         .logo svg {
-            height: 45px;
+            height: 40px;
             width: auto;
+        }
+
+        @media (min-width: 768px) {
+            .logo svg {
+                height: 45px;
+            }
         }
 
         .nav-menu {
@@ -121,10 +127,16 @@
             position: relative;
             min-height: 100vh;
             background: linear-gradient(rgba(30, 90, 171, 0.7), rgba(30, 90, 171, 0.7)),
-                        url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1920&q=80') center/cover;
+                        url('https://lh3.googleusercontent.com/d/1zN4Yn56wscAHNwTD1C0NIZI0WCJPdOld') center/cover;
             display: flex;
             align-items: center;
-            padding-top: 80px;
+            padding-top: 100px; /* Increased to prevent menu overlap on mobile */
+        }
+
+        @media (min-width: 768px) {
+            .hero {
+                padding-top: 80px;
+            }
         }
 
         .hero-container {
@@ -512,16 +524,14 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="/" class="logo">
-                <svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Accurate NJ State Shape -->
-                    <path d="M70 30 L85 28 L92 32 L95 38 L94 45 L96 52 L98 58 L100 65 L102 72 L103 78 L104 85 L105 92 L104 98 L102 105 L100 112 L97 118 L93 124 L88 130 L83 135 L77 140 L70 143 L62 145 L55 143 L48 140 L42 135 L37 130 L33 124 L30 118 L28 112 L27 105 L26 98 L25 92 L26 85 L28 78 L30 72 L33 65 L36 58 L40 52 L45 45 L52 38 L60 32 L70 30" fill="#1e88e5"/>
+                <svg viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
                     <!-- Company Name -->
-                    <text x="150" y="90" font-family="Arial Black, sans-serif" font-size="60" font-weight="900" fill="#1a365d">JERSEY BOYS</text>
+                    <text x="20" y="90" font-family="Arial Black, sans-serif" font-size="60" font-weight="900" fill="#1e88e5">JERSEY BOYS</text>
                     <!-- Divider Lines -->
-                    <line x1="150" y1="110" x2="280" y2="110" stroke="#1e88e5" stroke-width="3"/>
-                    <line x1="550" y1="110" x2="680" y2="110" stroke="#1e88e5" stroke-width="3"/>
+                    <line x1="20" y1="110" x2="150" y2="110" stroke="#1e88e5" stroke-width="3"/>
+                    <line x1="420" y1="110" x2="550" y2="110" stroke="#1e88e5" stroke-width="3"/>
                     <!-- ROOFING Text -->
-                    <text x="300" y="135" font-family="Arial, sans-serif" font-size="36" font-weight="600" fill="#1e88e5" letter-spacing="6">ROOFING</text>
+                    <text x="170" y="135" font-family="Arial, sans-serif" font-size="36" font-weight="600" fill="#1a365d" letter-spacing="6">ROOFING</text>
                 </svg>
             </a>
             <ul class="nav-menu">
