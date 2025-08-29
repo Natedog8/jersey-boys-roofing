@@ -51,6 +51,7 @@
         h1 {
             font-size: clamp(2.5rem, 5vw, 4rem);
             font-weight: 700;
+            color: var(--white);
         }
 
         h2 {
@@ -101,10 +102,14 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 1.5rem;
         }
 
-        .logo img {
-            height: 40px; /* Adjust based on your logo size */
+        .logo svg {
+            height: 50px;
+            width: auto;
         }
 
         .nav-menu {
@@ -138,16 +143,72 @@
             background: #152e4e;
         }
 
+        /* Mobile Menu Button */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 4px;
+            padding: 0.5rem;
+        }
+
+        .mobile-menu-btn span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--primary);
+            transition: all 0.3s;
+        }
+
+        .mobile-menu-btn.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .mobile-menu-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-btn.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+
         @media (max-width: 768px) {
+            .logo svg {
+                height: 40px;
+            }
+
             .nav-menu {
-                display: none; /* Add hamburger if needed */
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            .nav-cta {
+                display: none;
+            }
+
+            .nav-menu.active {
+                display: flex;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: var(--shadow-md);
+                border-bottom: 1px solid var(--light);
             }
         }
 
         /* Hero */
         .hero {
             position: relative;
-            background: url('https://images.unsplash.com/photo-1505843513577-22bb7d21e455?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat; /* Example image; replace with service-specific */
+            background: url('https://images.unsplash.com/photo-1505843513577-22bb7d21e455?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
             color: var(--white);
             padding: 8rem 0;
             text-align: left;
@@ -184,6 +245,9 @@
             text-decoration: none;
             font-weight: 600;
             transition: all 0.2s;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
         }
 
         .btn-primary {
@@ -212,6 +276,15 @@
             border-radius: var(--radius);
             box-shadow: var(--shadow-md);
             color: var(--neutral);
+        }
+
+        .quote-form h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .quote-form p {
+            margin-bottom: 1.5rem;
         }
 
         .form-group {
@@ -247,6 +320,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 2rem;
+            margin-top: 2rem;
         }
 
         @media (max-width: 768px) {
@@ -259,6 +333,7 @@
         .benefits-list {
             list-style: none;
             padding: 0;
+            margin-top: 2rem;
         }
 
         .benefits-list li {
@@ -273,6 +348,7 @@
             left: 0;
             color: var(--accent);
             font-weight: bold;
+            font-size: 1.2rem;
         }
 
         /* Testimonials */
@@ -280,6 +356,7 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
+            margin-top: 2rem;
         }
 
         .testimonial-card {
@@ -293,11 +370,17 @@
         .stars {
             color: #fbbf24;
             margin-bottom: 1rem;
+            font-size: 1.2rem;
         }
 
         .testimonial-author {
             font-weight: 600;
             color: var(--primary);
+        }
+
+        .testimonial-location {
+            color: var(--neutral);
+            font-size: 0.9rem;
         }
 
         @media (max-width: 1024px) {
@@ -313,6 +396,10 @@
         }
 
         /* FAQ */
+        .faq-container {
+            margin-top: 2rem;
+        }
+
         .faq-item {
             border-bottom: 1px solid var(--light);
             margin-bottom: 1rem;
@@ -368,6 +455,7 @@
 
         .cta h2 {
             color: var(--white);
+            margin-bottom: 1rem;
         }
 
         .cta p {
@@ -387,6 +475,7 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 3rem;
+            margin-bottom: 2rem;
         }
 
         .footer-section h4 {
@@ -461,20 +550,36 @@
 </head>
 <body>
 
-    <!-- Navigation (same as homepage) -->
+    <!-- Navigation -->
     <nav class="navbar">
-        <div class="container nav-container">
+        <div class="nav-container">
             <a href="/" class="logo">
-                <img src="jersey-boys-roofing-logo.png" alt="Jersey Boys Roofing">
+                <svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+                    <!-- NJ State Shape -->
+                    <path d="M50 40 L70 35 L75 40 L80 35 L85 30 L90 35 L92 40 L95 45 L98 50 L100 55 L102 60 L104 65 L105 70 L106 75 L107 80 L108 85 L109 90 L110 95 L109 100 L108 105 L106 110 L104 115 L102 120 L100 125 L98 130 L95 135 L92 140 L90 145 L85 150 L80 155 L75 160 L70 165 L65 160 L60 155 L55 150 L52 145 L50 140 L48 135 L46 130 L44 125 L42 120 L40 115 L38 110 L36 105 L35 100 L34 95 L35 90 L36 85 L37 80 L38 75 L39 70 L40 65 L42 60 L44 55 L46 50 L48 45 L50 40" fill="#1e88e5"/>
+                    <!-- Company Name -->
+                    <text x="150" y="90" font-family="Arial Black, sans-serif" font-size="60" font-weight="900" fill="#1a365d">JERSEY BOYS</text>
+                    <!-- Divider Lines -->
+                    <line x1="150" y1="110" x2="280" y2="110" stroke="#1e88e5" stroke-width="3"/>
+                    <line x1="550" y1="110" x2="680" y2="110" stroke="#1e88e5" stroke-width="3"/>
+                    <!-- ROOFING Text -->
+                    <text x="300" y="135" font-family="Arial, sans-serif" font-size="36" font-weight="600" fill="#1e88e5" letter-spacing="6">ROOFING</text>
+                </svg>
             </a>
             <ul class="nav-menu">
+                <li><a href="/" class="nav-link">Home</a></li>
                 <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#coverage" class="nav-link">Areas Served</a></li>
-                <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+                <li><a href="#areas" class="nav-link">Areas Served</a></li>
+                <li><a href="#reviews" class="nav-link">Reviews</a></li>
                 <li><a href="#process" class="nav-link">Process</a></li>
                 <li><a href="#faq" class="nav-link">FAQ</a></li>
             </ul>
-            <a href="tel:732-555-ROOF" class="nav-cta">Call Now: (732) 555-ROOF</a>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <a href="tel:7325557663" class="nav-cta">Call Now: (732) 555-ROOF</a>
         </div>
     </nav>
 
@@ -565,7 +670,7 @@
         </div>
     </section>
 
-    <!-- Testimonials (service-specific if available, else general) -->
+    <!-- Testimonials -->
     <section id="testimonials" class="section" style="background: var(--light);">
         <div class="container">
             <span class="eyebrow">Emergency Repair Reviews</span>
@@ -593,8 +698,8 @@
         </div>
     </section>
 
-    <!-- FAQ (service-specific) -->
-    <section id="faq" class="section" style="background: var(--light);">
+    <!-- FAQ -->
+    <section id="faq" class="section">
         <div class="container">
             <span class="eyebrow">Emergency Repair FAQ</span>
             <h2>Frequently Asked Questions About Emergency Roof Repair</h2>
@@ -627,7 +732,7 @@
         </div>
     </section>
 
-    <!-- SEO Content (long-form, service-focused) -->
+    <!-- SEO Content -->
     <section class="content-section section">
         <div class="container content-wrapper">
             <h2>24/7 Emergency Roof Repair Services in New Jersey</h2>
@@ -640,7 +745,6 @@
             </div>
             <h3>Temporary vs Permanent Repairs</h3>
             <p>In emergencies, we first provide temporary fixes like tarping to stop damage, then schedule permanent repairs. All work is backed by our lifetime warranty.</p>
-            <!-- Add more service-specific content as needed -->
         </div>
     </section>
 
@@ -654,7 +758,7 @@
         </div>
     </section>
 
-    <!-- Footer (same as homepage) -->
+    <!-- Footer -->
     <footer>
         <div class="container footer-content">
             <div class="footer-section">
@@ -687,30 +791,4 @@
                 <ul>
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">Reviews</a></li>
-                    <li><a href="#">Warranty</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom container">
-            <p>&copy; 2025 Jersey Boys Roofing. All rights reserved. License #13VH0123456 | Fully Insured</p>
-        </div>
-    </footer>
-
-    <script>
-        // FAQ Toggle
-        document.querySelectorAll('.faq-question').forEach(q => {
-            q.addEventListener('click', () => {
-                q.parentElement.classList.toggle('active');
-            });
-        });
-
-        // Form Submission (placeholder)
-        document.querySelector('.quote-form form').addEventListener('submit', e => {
-            e.preventDefault();
-            alert('Thank you! Our team will contact you shortly.');
-        });
-    </script>
-</body>
-</html>
+                    <li>
