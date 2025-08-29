@@ -1,0 +1,654 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Service Name] | Jersey Boys Roofing - North & Central NJ</title>
+    <meta name="description" content="[Brief service description with keywords for SEO]">
+    <meta property="og:title" content="[Service Name] - Jersey Boys Roofing">
+    <meta property="og:description" content="[OG description]">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://jerseyboysroofing.com/images/[service-image].jpg">
+    <link rel="canonical" href="https://jerseyboysroofing.com/[service-slug]">
+
+    <!-- Fonts: Zilla Slab for strong, solid headings; Inter for clean body text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Zilla+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #1a365d; /* Deep blue for trust */
+            --accent: #b45309; /* Warm amber accent */
+            --neutral: #4b5563; /* Gray for text */
+            --light: #f3f4f6; /* Light background */
+            --white: #ffffff;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --container-max: 1280px;
+            --radius: 8px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--neutral);
+            line-height: 1.6;
+            background: var(--white);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Zilla Slab', serif;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            font-weight: 600;
+        }
+
+        h3 {
+            font-size: clamp(1.5rem, 3vw, 1.8rem);
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .container {
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .section {
+            padding: 6rem 0;
+        }
+
+        .eyebrow {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: sticky;
+            top: 0;
+            background: var(--white);
+            border-bottom: 1px solid var(--light);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 40px; /* Adjust based on your logo size */
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: var(--neutral);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        .nav-cta {
+            background: var(--primary);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .nav-cta:hover {
+            background: #152e4e;
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none; /* Add hamburger if needed */
+            }
+        }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            background: url('[service-hero-image-url]') center/cover no-repeat; /* Replace with service-specific image */
+            color: var(--white);
+            padding: 8rem 0;
+            text-align: left;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(26, 54, 93, 0.7), rgba(26, 54, 93, 0.4));
+        }
+
+        .hero-content {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .hero-text h1 {
+            margin-bottom: 1rem;
+        }
+
+        .hero-text p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: #9a4510;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 1px solid var(--white);
+            color: var(--white);
+        }
+
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--primary);
+        }
+
+        .quote-form {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-md);
+            color: var(--neutral);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--light);
+            border-radius: var(--radius);
+            font: inherit;
+        }
+
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Service Details */
+        .service-details {
+            background: var(--light);
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .details-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Benefits */
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .benefits-list li {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .benefits-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        /* Testimonials */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 2rem;
+            border: 1px solid var(--light);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .stars {
+            color: #fbbf24;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        @media (max-width: 1024px) {
+            .testimonial-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* FAQ */
+        .faq-item {
+            border-bottom: 1px solid var(--light);
+            margin-bottom: 1rem;
+        }
+
+        .faq-question {
+            cursor: pointer;
+            font-weight: 500;
+            padding: 1rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s;
+            padding: 0 1rem;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding-bottom: 1rem;
+        }
+
+        /* Content Section */
+        .content-section {
+            background: var(--light);
+        }
+
+        .content-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .highlight-box {
+            background: var(--white);
+            padding: 2rem;
+            border-left: 4px solid var(--accent);
+            border-radius: var(--radius);
+            margin: 2rem 0;
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* CTA */
+        .cta {
+            background: var(--primary);
+            color: var(--white);
+            text-align: center;
+            padding: 6rem 0;
+        }
+
+        .cta h2 {
+            color: var(--white);
+        }
+
+        .cta p {
+            color: rgba(255,255,255,0.9);
+            max-width: 600px;
+            margin: 1rem auto 2rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: rgba(255,255,255,0.8);
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+        }
+
+        .footer-section h4 {
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.2s;
+        }
+
+        .footer-section a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 2rem;
+        }
+
+        @media (max-width: 1024px) {
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "[Service Name]",
+        "provider": {
+            "@type": "RoofingContractor",
+            "name": "Jersey Boys Roofing",
+            "image": "https://jerseyboysroofing.com/logo.png",
+            "url": "https://jerseyboysroofing.com",
+            "telephone": "732-555-ROOF",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Edison",
+                "addressRegion": "NJ",
+                "postalCode": "08817",
+                "addressCountry": "US"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "reviewCount": "527"
+            }
+        },
+        "areaServed": "North and Central New Jersey",
+        "description": "[Service description for JSON-LD]"
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Navigation (same as homepage) -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="/" class="logo">
+                <img src="jersey-boys-roofing-logo.png" alt="Jersey Boys Roofing">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#coverage" class="nav-link">Areas Served</a></li>
+                <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+                <li><a href="#process" class="nav-link">Process</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
+            </ul>
+            <a href="tel:732-555-ROOF" class="nav-cta">Call Now: (732) 555-ROOF</a>
+        </div>
+    </nav>
+
+    <!-- Service Hero -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>[Service Name] in North & Central New Jersey</h1>
+                <p>[Service-specific subtitle with key benefits and keywords].</p>
+                <a href="tel:732-555-ROOF" class="btn btn-primary">Get Help Now</a>
+                <a href="#quote" class="btn btn-secondary">Free Quote</a>
+            </div>
+            <div class="quote-form" id="quote">
+                <h3>Request a [Service] Quote</h3>
+                <p>Our team will respond within 60 seconds.</p>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <select id="city" required>
+                            <option value="">Select City</option>
+                            <!-- Options same as homepage -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Details</label>
+                        <textarea id="message" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Details -->
+    <section class="service-details section">
+        <div class="container">
+            <span class="eyebrow">[Service Category]</span>
+            <h2>Our [Service Name] Process</h2>
+            <p>[Intro paragraph about the service].</p>
+            <div class="details-grid">
+                <div>
+                    <h3>Step 1: [Step Title]</h3>
+                    <p>[Description].</p>
+                </div>
+                <div>
+                    <h3>Step 2: [Step Title]</h3>
+                    <p>[Description].</p>
+                </div>
+                <!-- Add more steps as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="section">
+        <div class="container">
+            <h2>Why Choose Jersey Boys for [Service Name]</h2>
+            <ul class="benefits-list">
+                <li>[Benefit 1 with keywords].</li>
+                <li>[Benefit 2].</li>
+                <li>[Benefit 3].</li>
+                <!-- Add more -->
+            </ul>
+        </div>
+    </section>
+
+    <!-- Testimonials (service-specific if available, else general) -->
+    <section id="testimonials" class="section" style="background: var(--light);">
+        <div class="container">
+            <span class="eyebrow">[Service] Reviews</span>
+            <h2>What Customers Say About Our [Service Name]</h2>
+            <div class="testimonial-grid">
+                <!-- Testimonials here, similar to homepage -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ (service-specific) -->
+    <section id="faq" class="section" style="background: var(--light);">
+        <div class="container">
+            <span class="eyebrow">[Service] FAQ</span>
+            <h2>Frequently Asked Questions About [Service Name]</h2>
+            <div class="faq-container">
+                <!-- FAQ items here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- SEO Content (long-form, service-focused) -->
+    <section class="content-section section">
+        <div class="container content-wrapper">
+            <h2>[Main H2 for SEO Content]</h2>
+            <p>[Long-form content with subsections, highlights, and keywords].</p>
+            <!-- Full service-specific SEO copy -->
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready for [Service Name]?</h2>
+            <p>[Service-specific call to action].</p>
+            <a href="tel:732-555-ROOF" class="btn btn-primary">Call (732) 555-ROOF</a>
+            <a href="#quote" class="btn btn-secondary">Request Quote</a>
+        </div>
+    </section>
+
+    <!-- Footer (same as homepage) -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h4>Jersey Boys Roofing</h4>
+                <p>Serving North & Central NJ since 2005.</p>
+                <p>(732) 555-ROOF<br>info@jerseyboysroofing.com<br>24/7 Emergency Service</p>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#">Emergency Repair</a></li>
+                    <li><a href="#">Roof Replacement</a></li>
+                    <li><a href="#">Storm Damage</a></li>
+                    <li><a href="#">Free Inspection</a></li>
+                    <li><a href="#">Insurance Claims</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Service Areas</h4>
+                <ul>
+                    <li><a href="#">Newark</a></li>
+                    <li><a href="#">Jersey City</a></li>
+                    <li><a href="#">Edison</a></li>
+                    <li><a href="#">Princeton</a></li>
+                    <li><a href="#">Toms River</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Reviews</a></li>
+                    <li><a href="#">Warranty</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>&copy; 2025 Jersey Boys Roofing. All rights reserved. License #13VH0123456 | Fully Insured</p>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(q => {
+            q.addEventListener('click', () => {
+                q.parentElement.classList.toggle('active');
+            });
+        });
+
+        // Form Submission (placeholder)
+        document.querySelector('.quote-form form').addEventListener('submit', e => {
+            e.preventDefault();
+            alert('Thank you! Our team will contact you shortly.');
+        });
+    </script>
+</body>
+</html>
+```
