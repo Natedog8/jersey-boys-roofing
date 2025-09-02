@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gutter Guards America - America's Best Gutter Guards</title>
+    <title>Gutter Guards America - Professional Gutter Protection</title>
     <style>
         * {
             margin: 0;
@@ -12,304 +12,812 @@
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             color: #333333;
             background: #ffffff;
             line-height: 1.6;
         }
 
-        .container {
+        /* Header with Navigation */
+        .header {
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-top {
+            background: #f8f9fa;
+            padding: 10px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .header-top .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        /* Header Section */
-        .header {
-            background: #ffffff;
-            padding: 20px 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .header-content {
+        .forbes-badge {
             display: flex;
             align-items: center;
-            margin-bottom: 15px;
+            gap: 15px;
         }
 
-        .header-badge {
-            width: 80px;
-            height: auto;
-            margin-right: 15px;
+        .forbes-badge img {
+            height: 40px;
+            width: auto;
         }
 
-        .header-text {
-            flex: 1;
+        .company-info {
+            text-align: right;
         }
 
         .company-name {
-            font-size: 24px;
-            font-weight: bold;
+            font-size: 20px;
+            font-weight: 700;
             color: #2c5530;
-            margin-bottom: 5px;
         }
 
         .tagline {
-            font-size: 14px;
-            color: #666666;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .nav-bar {
+            background: #2c5530;
+            padding: 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 0;
+        }
+
+        .nav-menu li {
+            position: relative;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            display: block;
+            transition: background 0.3s;
+            font-weight: 500;
+        }
+
+        .nav-menu a:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        .header-cta {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .phone-number {
+            color: white;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .cta-button {
+            background: #ff6b35;
+            color: white;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 5px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background: #ff5722;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255,107,53,0.3);
         }
 
         /* Hero Section */
         .hero {
-            background: #ffffff;
-            padding: 60px 20px;
+            background: linear-gradient(rgba(44,85,48,0.9), rgba(44,85,48,0.9)), 
+                        url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600') center/cover;
+            color: white;
+            padding: 100px 20px;
             text-align: center;
         }
 
         .hero h1 {
-            font-size: 36px;
-            font-weight: bold;
-            color: #2c5530;
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
             max-width: 800px;
-            margin: 0 auto;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        /* Content Sections */
-        .section {
-            padding: 60px 20px;
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .section:nth-child(even) {
+        .hero-cta {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .hero-button {
+            padding: 15px 35px;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .hero-button-primary {
+            background: #ff6b35;
+            color: white;
+            border: 2px solid #ff6b35;
+        }
+
+        .hero-button-primary:hover {
+            background: #ff5722;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .hero-button-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .hero-button-secondary:hover {
+            background: white;
+            color: #2c5530;
+        }
+
+        /* Main Content Section */
+        .content-section {
+            padding: 80px 20px;
+        }
+
+        .content-section:nth-child(even) {
             background: #f8f9fa;
         }
 
-        .section-content {
+        .container {
             max-width: 1200px;
             margin: 0 auto;
         }
 
-        .section h2 {
-            font-size: 28px;
-            font-weight: bold;
-            color: #2c5530;
-            margin-bottom: 25px;
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
         }
 
-        .section p {
+        .section-title {
+            font-size: 36px;
+            font-weight: 700;
+            color: #2c5530;
             margin-bottom: 20px;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
             line-height: 1.8;
         }
 
-        .section-image {
-            width: 100%;
-            height: auto;
-            margin: 30px 0;
-            display: block;
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 60px;
         }
 
-        /* Feature Blocks */
-        .feature-block {
-            margin-bottom: 25px;
+        .content-text {
+            padding: 20px;
         }
 
-        .feature-block h3 {
-            font-size: 20px;
-            font-weight: bold;
-            color: #2c5530;
-            margin-bottom: 10px;
-        }
-
-        .feature-block p {
-            margin-bottom: 15px;
-        }
-
-        /* Benefit Blocks */
-        .benefit-block {
-            margin-bottom: 25px;
-        }
-
-        .benefit-block h3 {
-            font-size: 18px;
-            font-weight: bold;
-            color: #2c5530;
-            margin-bottom: 10px;
-        }
-
-        .benefit-block p {
-            margin-bottom: 15px;
-        }
-
-        /* Bold CTAs */
-        .bold-cta {
-            font-weight: bold;
-            margin: 30px 0;
-            font-size: 16px;
-        }
-
-        .cta-text {
-            margin: 20px 0;
-        }
-
-        /* Testimonials Section */
-        .testimonials-section {
-            padding: 40px 20px;
-            background: #ffffff;
-        }
-
-        .testimonials-section h2 {
+        .content-text h3 {
             font-size: 28px;
-            font-weight: bold;
             color: #2c5530;
-            text-align: center;
+            margin-bottom: 20px;
+            font-weight: 700;
         }
 
-        /* Responsive */
+        .content-text p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .content-image {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: #2c5530;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: white;
+        }
+
+        .feature-card h3 {
+            font-size: 22px;
+            color: #2c5530;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .feature-card p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        /* Benefits Section */
+        .benefits-section {
+            background: #2c5530;
+            color: white;
+            padding: 80px 20px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .benefit-item {
+            display: flex;
+            gap: 20px;
+        }
+
+        .benefit-icon {
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .benefit-content h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #90EE90;
+        }
+
+        .benefit-content p {
+            font-size: 15px;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        /* Form Section */
+        .form-section {
+            background: linear-gradient(135deg, #2c5530 0%, #4a7c4e 100%);
+            padding: 80px 20px;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-header h2 {
+            font-size: 32px;
+            color: #2c5530;
+            margin-bottom: 10px;
+        }
+
+        .form-header p {
+            color: #666;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #2c5530;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .submit-button {
+            width: 100%;
+            padding: 15px;
+            background: #ff6b35;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .submit-button:hover {
+            background: #ff5722;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(255,107,53,0.3);
+        }
+
+        /* Footer */
+        .footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 60px 20px 20px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #90EE90;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-column ul li a:hover {
+            color: #90EE90;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            color: #999;
+        }
+
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .header-badge {
-                margin-bottom: 10px;
-            }
-
             .hero h1 {
-                font-size: 28px;
+                font-size: 32px;
             }
 
-            .section h2 {
-                font-size: 24px;
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .header-cta {
+                font-size: 14px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header Section -->
-    <div class="header">
-        <div class="container">
-            <!-- First instance of header content -->
-            <div class="header-content">
-                <img src="https://gutterguardsamerica.com/wp-content/uploads/2023/04/forbes2023.png" alt="Forbes 2023" class="header-badge">
-                <div class="header-text">
-                    <div class="company-name">GGA Roofing</div>
-                    <div class="tagline">The premier choice for residential roofing, siding, gutters, and gutter guards.</div>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="forbes-badge">
+                    <img src="https://gutterguardsamerica.com/wp-content/uploads/2023/04/forbes2023.png" alt="Forbes 2023">
+                    <img src="https://gutterguardsamerica.com/wp-content/uploads/2023/04/forbes2023.png" alt="Forbes 2023">
                 </div>
-            </div>
-            <!-- Second instance of header content (duplicate as specified) -->
-            <div class="header-content">
-                <img src="https://gutterguardsamerica.com/wp-content/uploads/2023/04/forbes2023.png" alt="Forbes 2023" class="header-badge">
-                <div class="header-text">
+                <div class="company-info">
                     <div class="company-name">GGA Roofing</div>
                     <div class="tagline">The premier choice for residential roofing, siding, gutters, and gutter guards.</div>
                 </div>
             </div>
         </div>
-    </div>
+        <nav class="nav-bar">
+            <div class="nav-container">
+                <ul class="nav-menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Gutter Guards</a></li>
+                    <li><a href="#">Roofing</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <div class="header-cta">
+                    <span class="phone-number">📞 1-800-GUTTERS</span>
+                    <a href="#form" class="cta-button">Get Free Quote</a>
+                </div>
+            </div>
+        </nav>
+    </header>
 
     <!-- Hero Section -->
-    <div class="hero">
+    <section class="hero">
         <h1>Protect Your Home With America's Best Gutter Guards</h1>
-    </div>
-
-    <!-- Section 1 - Introduction Paragraph -->
-    <div class="section">
-        <div class="section-content">
-            <p>Here at Gutter Guards America, we understand that your home is one of the most significant investments you can make. Preserving its structural integrity is essential for maintaining its value and, most importantly, ensuring the safety of your loved ones. One aspect of home maintenance that is often overlooked is the gutter system. Gutters play a crucial role in diverting water away from the foundation, preventing water damage in your home, and maintaining the overall health of the structure. To enhance the efficiency and longevity of your rain gutter system, investing in high-quality, clog resistant gutter guards is essential. Not only can a gutter guard installation protect your home from potential damage, but it can also save you time and money in the long run by reducing the need for frequent gutter cleaning.</p>
-            
-            <img src="https://gutterguardsamerica.com/wp-content/uploads/2023/04/After-2-2-scaled.jpg" alt="After installation" class="section-image">
+        <p>Professional installation, lifetime warranty, and superior protection for your home</p>
+        <div class="hero-cta">
+            <a href="#form" class="hero-button hero-button-primary">Get Free Estimate</a>
+            <a href="#" class="hero-button hero-button-secondary">View Our Work</a>
         </div>
-    </div>
+    </section>
 
-    <!-- Section 2 - Second Paragraph -->
-    <div class="section">
-        <div class="section-content">
-            <p>When it comes to choosing the best gutter guards installation company for your home, choose the professionals at Gutter Guards America. We offer a high-quality, state-of-the-art system with exceptional customer service. With so many different types of rain gutter cover companies available, it can be very overwhelming to decide which gutter guard system is best for your home. Gutter Guards America stands out among the competition due to the cutting-edge patented design and durability of the top-rated gutter guard system, and ease of the installation process. These gutter guards are designed with advanced technologies and materials that ensure optimal water flow while preventing clogs caused by leaves, debris, and even pests.</p>
-        </div>
-    </div>
-
-    <!-- Section 3 - Roofing Quality -->
-    <div class="section">
-        <div class="section-content">
-            <h2>Experience Unrivaled Roofing Quality</h2>
-            <p>Gutter Guards America offers exclusive roofing services, providing meticulous attention to detail and a commitment to excellence in every installation. With a focus on quality and customer satisfaction, Gutter Guards America stands out as a premier choice for roofing solutions near you, ensuring a secure and long-lasting roof.</p>
-        </div>
-    </div>
-
-    <!-- Section 4 - Superior Alternative -->
-    <div class="section">
-        <div class="section-content">
-            <h2>The Superior Alternative to Other Micro-Mesh Gutter Guard Systems</h2>
-            <p>The best gutter guards are constructed from materials that can withstand harsh weather conditions, avoid blockage, and resist rust and corrosion. Our gutter guards installation company offers the best for our customers:</p>
-            
-            <div class="feature-block">
-                <h3>Stainless Steel Mesh</h3>
-                <p>While some other micro-mesh gutter covers are made with plastic mesh that corrodes over time, we use stainless steel for a lightweight solution that won't rust, making them your ideal choice for a gutter cover installation.</p>
-            </div>
-
-            <div class="feature-block">
-                <h3>Award-Winning Design</h3>
-                <p>Unlike other micro-mesh systems, the patented, award-winning designcaptures more water and eliminates leaf and debris build up, allowing your gutters to keep rainwater away from your foundation.</p>
-            </div>
-
-            <div class="feature-block">
-                <h3>Lifetime Warranty</h3>
-                <p>Built in the U.S.A., this gutter guard system comes with a lifetime transferable warranty and a no clog guarantee. You will have peace of mind knowing your gutters are protected against clogs for the lifetime of the home.</p>
-            </div>
-
-            <p class="bold-cta"><strong>Your home is too precious to risk doing business with just any gutter guard installation company. Choose the Best Micro-Mesh Gutter Guard System Today!</strong></p>
-        </div>
-    </div>
-
-    <!-- Section 5 - Prevent Damage -->
-    <div class="section">
-        <div class="section-content">
-            <h2>Prevent Damage With the #1 Gutter Guard System in America</h2>
-            <p>Gutter Guards America has decades of experience protecting homes with their superior product. With this one-of-a-kind design, you can prevent damages that are common with unprotected gutters.</p>
-            
-            <img src="https://gutterguardsamerica.com/wp-content/uploads/2023/08/gutter-guards-america-2023-june-9-1-1.jpg" alt="Gutter Guards Installation" class="section-image">
-
-            <div class="benefit-block">
-                <h3>Prevent Water Damage</h3>
-                <p>Without the proper gutter guard installation, debris buildup or ice dams can stop water from properly flowing through your gutter system. This can cause the water to overflow onto your roof and cause leaks inside your home.</p>
-            </div>
-
-            <div class="benefit-block">
-                <h3>Remove Fire Hazards</h3>
-                <p>A buildup of dry leaves in your gutter system puts your home at risk. A single ember from a firework, adjacent campfire, or nearby brushfire can ignite the leaves and put your home and family in grave danger.</p>
-            </div>
-
-            <div class="benefit-block">
-                <h3>Block Pest Infestations</h3>
-                <p>The right gutter guard company can help keep your home safe from pests. Insects, mice, birds, bats, and other pests can no longer nest in your gutters. Additionally, a gutter cover installation can help block these pests from crawling into your roof structure.</p>
-            </div>
-
-            <div class="benefit-block">
-                <h3>Limit Structural Damage</h3>
-                <p>When water overflows from your gutters, it can seep between your roof boards and cause leaks inside of your home. If the leaks go undetected and either pool in your attic or drip down the wall frames, the rot and damage can cause devastating results. Avoid these troubles with a professional gutter guard installation by Gutter Guards America.</p>
-            </div>
-
-            <p>With the right gutter guards in place, you can enjoy peace of mind knowing that your home is well-protected and that your gutter system is functioning efficiently and effectively.</p>
-
-            <p class="cta-text">Contact Gutter Guards America to learn more about how a gutter guard installation can protect your home.</p>
-        </div>
-    </div>
-
-    <!-- Section 6 - Testimonials -->
-    <div class="testimonials-section">
+    <!-- Main Content -->
+    <section class="content-section">
         <div class="container">
-            <h2>Testimonials</h2>
-        </div>
-    </div>
+            <div class="content-grid">
+                <div class="content-text">
+                    <h3>Why Choose Gutter Guards America?</h3>
+                    <p>Here at Gutter Guards America, we understand that your home is one of the most significant investments you can make. Preserving its structural integrity is essential for maintaining its value and, most importantly, ensuring the safety of your loved ones.</p>
+                    <p>One aspect of home maintenance that is often overlooked is the gutter system. Gutters play a crucial role in diverting water away from the foundation, preventing water damage in your home, and maintaining the overall health of the structure.</p>
+                    <p>To enhance the efficiency and longevity of your rain gutter system, investing in high-quality, clog resistant gutter guards is essential. Not only can a gutter guard installation protect your home from potential damage, but it can also save you time and money in the long run by reducing the need for frequent gutter cleaning.</p>
+                </div>
+                <div>
+                    <img src="https://gutterguardsamerica.com/wp-content/uploads/2023/04/After-2-2-scaled.jpg" alt="Gutter Installation" class="content-image">
+                </div>
+            </div>
 
-    <!-- Section 7 - Final CTA -->
-    <div class="section">
-        <div class="section-content">
-            <h2>Choose the Award-Winning Gutter Guards Installation Company - Gutter Guards America</h2>
-            <p>At Gutter Guards America, we strive to not only provide high-quality products but also exceptional customer service and support. This includes offering a lifetime transferable warranty, replacing or cleaning your current gutters during a gutter guard installation, and ensuring that any defects or issues are addressed promptly and professionally. Our team of skilled and experienced professionals can guide and assist you during the installation process, ensuring that your gutter guards are installed correctly, function efficiently, and last a lifetime.</p>
-            
-            <p class="bold-cta"><strong>Call Gutter Guards America and protect your home and loved ones with an award-winning, superior system today!</strong></p>
+            <div class="content-grid">
+                <div>
+                    <img src="https://gutterguardsamerica.com/wp-content/uploads/2023/08/gutter-guards-america-2023-june-9-1-1.jpg" alt="Professional Installation" class="content-image">
+                </div>
+                <div class="content-text">
+                    <h3>Professional Installation You Can Trust</h3>
+                    <p>When it comes to choosing the best gutter guards installation company for your home, choose the professionals at Gutter Guards America. We offer a high-quality, state-of-the-art system with exceptional customer service.</p>
+                    <p>With so many different types of rain gutter cover companies available, it can be very overwhelming to decide which gutter guard system is best for your home. Gutter Guards America stands out among the competition due to the cutting-edge patented design and durability of the top-rated gutter guard system, and ease of the installation process.</p>
+                    <p>These gutter guards are designed with advanced technologies and materials that ensure optimal water flow while preventing clogs caused by leaves, debris, and even pests.</p>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Roofing Quality Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Experience Unrivaled Roofing Quality</h2>
+                <p class="section-subtitle">Gutter Guards America offers exclusive roofing services, providing meticulous attention to detail and a commitment to excellence in every installation. With a focus on quality and customer satisfaction, Gutter Guards America stands out as a premier choice for roofing solutions near you, ensuring a secure and long-lasting roof.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">The Superior Alternative to Other Micro-Mesh Gutter Guard Systems</h2>
+                <p class="section-subtitle">The best gutter guards are constructed from materials that can withstand harsh weather conditions, avoid blockage, and resist rust and corrosion. Our gutter guards installation company offers the best for our customers:</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Stainless Steel Mesh</h3>
+                    <p>While some other micro-mesh gutter covers are made with plastic mesh that corrodes over time, we use stainless steel for a lightweight solution that won't rust, making them your ideal choice for a gutter cover installation.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h3>Award-Winning Design</h3>
+                    <p>Unlike other micro-mesh systems, the patented, award-winning design captures more water and eliminates leaf and debris build up, allowing your gutters to keep rainwater away from your foundation.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✅</div>
+                    <h3>Lifetime Warranty</h3>
+                    <p>Built in the U.S.A., this gutter guard system comes with a lifetime transferable warranty and a no clog guarantee. You will have peace of mind knowing your gutters are protected against clogs for the lifetime of the home.</p>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 40px; font-size: 18px; font-weight: 700; color: #2c5530;">
+                Your home is too precious to risk doing business with just any gutter guard installation company. Choose the Best Micro-Mesh Gutter Guard System Today!
+            </p>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" style="color: white;">Prevent Damage With the #1 Gutter Guard System in America</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Gutter Guards America has decades of experience protecting homes with their superior product. With this one-of-a-kind design, you can prevent damages that are common with unprotected gutters.</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">💧</div>
+                    <div class="benefit-content">
+                        <h4>Prevent Water Damage</h4>
+                        <p>Without the proper gutter guard installation, debris buildup or ice dams can stop water from properly flowing through your gutter system. This can cause the water to overflow onto your roof and cause leaks inside your home.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🔥</div>
+                    <div class="benefit-content">
+                        <h4>Remove Fire Hazards</h4>
+                        <p>A buildup of dry leaves in your gutter system puts your home at risk. A single ember from a firework, adjacent campfire, or nearby brushfire can ignite the leaves and put your home and family in grave danger.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🐛</div>
+                    <div class="benefit-content">
+                        <h4>Block Pest Infestations</h4>
+                        <p>The right gutter guard company can help keep your home safe from pests. Insects, mice, birds, bats, and other pests can no longer nest in your gutters. Additionally, a gutter cover installation can help block these pests from crawling into your roof structure.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🏠</div>
+                    <div class="benefit-content">
+                        <h4>Limit Structural Damage</h4>
+                        <p>When water overflows from your gutters, it can seep between your roof boards and cause leaks inside of your home. If the leaks go undetected and either pool in your attic or drip down the wall frames, the rot and damage can cause devastating results.</p>
+                    </div>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 40px; color: white;">
+                With the right gutter guards in place, you can enjoy peace of mind knowing that your home is well-protected and that your gutter system is functioning efficiently and effectively.
+            </p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Testimonials</h2>
+                <p class="section-subtitle">See what our satisfied customers have to say about their experience with Gutter Guards America</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="form-section" id="form">
+        <div class="form-container">
+            <div class="form-header">
+                <h2>Get Your Free Estimate</h2>
+                <p>Contact Gutter Guards America to learn more about how a gutter guard installation can protect your home.</p>
+            </div>
+            <div class="form-group form-row">
+                <div class="form-group">
+                    <label>First Name *</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label>Last Name *</label>
+                    <input type="text" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Email Address *</label>
+                <input type="email" required>
+            </div>
+            <div class="form-group">
+                <label>Phone Number *</label>
+                <input type="tel" required>
+            </div>
+            <div class="form-group">
+                <label>Address</label>
+                <input type="text">
+            </div>
+            <div class="form-group form-row">
+                <div class="form-group">
+                    <label>City</label>
+                    <input type="text">
+                </div>
+                <div class="form-group">
+                    <label>State</label>
+                    <select>
+                        <option>Select State</option>
+                        <option>Alabama</option>
+                        <option>Alaska</option>
+                        <option>Arizona</option>
+                        <option>Arkansas</option>
+                        <option>California</option>
+                        <!-- Add all states -->
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Zip Code</label>
+                <input type="text">
+            </div>
+            <div class="form-group">
+                <label>Service Needed</label>
+                <select>
+                    <option>Select Service</option>
+                    <option>Gutter Guards Installation</option>
+                    <option>Gutter Cleaning</option>
+                    <option>Gutter Repair</option>
+                    <option>Roofing Services</option>
+                    <option>Free Inspection</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Message</label>
+                <textarea rows="4" placeholder="Tell us about your project..."></textarea>
+            </div>
+            <button type="submit" class="submit-button">Get My Free Estimate</button>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Choose the Award-Winning Gutter Guards Installation Company - Gutter Guards America</h2>
+                <p class="section-subtitle">At Gutter Guards America, we strive to not only provide high-quality products but also exceptional customer service and support. This includes offering a lifetime transferable warranty, replacing or cleaning your current gutters during a gutter guard installation, and ensuring that any defects or issues are addressed promptly and professionally. Our team of skilled and experienced professionals can guide and assist you during the installation process, ensuring that your gutter guards are installed correctly, function efficiently, and last a lifetime.</p>
+                <p style="text-align: center; margin-top: 30px; font-size: 20px; font-weight: 700; color: #2c5530;">
+                    Call Gutter Guards America and protect your home and loved ones with an award-winning, superior system today!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Gutter Guards</a></li>
+                    <li><a href="#">Gutter Installation</a></li>
+                    <li><a href="#">Gutter Cleaning</a></li>
+                    <li><a href="#">Roofing Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Our Process</a></li>
+                    <li><a href="#">Warranty</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Maintenance Tips</a></li>
+                    <li><a href="#">Gallery</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <ul>
+                    <li>📞 1-800-GUTTERS</li>
+                    <li>✉️ info@gutterguardsamerica.com</li>
+                    <li>📍 Nationwide Service</li>
+                    <li>🕒 Mon-Sat: 8AM-6PM</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Gutter Guards America. All rights reserved. | Privacy Policy | Terms of Service</p>
+        </div>
+    </footer>
 </body>
 </html>
