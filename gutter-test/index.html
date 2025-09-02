@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gutter Guards America - Professional Gutter Protection</title>
+    <meta name="title" content="Top Gutter Cleaning & Installation in North Jersey | Free Quotes">
+    <meta name="description" content="Protect your home from water damage with expert gutter services in Newark, Jersey City. Call now!">
+    <title>Jersey Gutter Magic - #1 Gutter Services in North Jersey</title>
     <style>
         * {
             margin: 0;
@@ -16,9 +18,33 @@
             color: #333333;
             background: #ffffff;
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
-        /* Header with Navigation */
+        /* Urgency Banner */
+        .urgency-banner {
+            background: linear-gradient(90deg, #ff6b35, #ff8c42);
+            color: white;
+            text-align: center;
+            padding: 12px 20px;
+            font-weight: 700;
+            font-size: 16px;
+            position: relative;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.9; }
+        }
+
+        .urgency-banner .countdown {
+            display: inline-block;
+            margin-left: 10px;
+            font-size: 18px;
+        }
+
+        /* Header */
         .header {
             background: #ffffff;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -42,30 +68,36 @@
             padding: 0 20px;
         }
 
-        .forbes-badge {
+        .company-branding {
             display: flex;
             align-items: center;
             gap: 15px;
         }
 
-        .forbes-badge img {
-            height: 40px;
-            width: auto;
+        .company-logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #2c5530;
         }
 
         .company-info {
             text-align: right;
         }
 
-        .company-name {
-            font-size: 20px;
-            font-weight: 700;
-            color: #2c5530;
+        .tagline {
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
         }
 
-        .tagline {
+        .since-badge {
+            background: #2c5530;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 3px;
             font-size: 12px;
-            color: #666;
+            margin-top: 5px;
+            display: inline-block;
         }
 
         .nav-bar {
@@ -86,10 +118,6 @@
             display: flex;
             list-style: none;
             gap: 0;
-        }
-
-        .nav-menu li {
-            position: relative;
         }
 
         .nav-menu a {
@@ -115,10 +143,11 @@
             color: white;
             font-size: 18px;
             font-weight: 700;
+            text-decoration: none;
         }
 
-        .cta-button {
-            background: #ff6b35;
+        .cta-button-header {
+            background: #4CAF50;
             color: white;
             padding: 10px 25px;
             border: none;
@@ -130,66 +159,95 @@
             display: inline-block;
         }
 
-        .cta-button:hover {
-            background: #ff5722;
+        .cta-button-header:hover {
+            background: #45a049;
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(255,107,53,0.3);
+            box-shadow: 0 5px 15px rgba(76,175,80,0.3);
         }
 
-        /* Hero Section */
+        /* Hero Section - Enhanced */
         .hero {
-            background: linear-gradient(rgba(44,85,48,0.9), rgba(44,85,48,0.9)), 
-                        url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600') center/cover;
+            background: linear-gradient(rgba(44,85,48,0.85), rgba(44,85,48,0.85)), 
+                        url('https://images.unsplash.com/photo-1625597942012-8fa89845e7ff?w=1600') center/cover;
             color: white;
-            padding: 100px 20px;
+            padding: 120px 20px;
             text-align: center;
+            position: relative;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
         }
 
         .hero h1 {
-            font-size: 48px;
+            font-size: 52px;
             font-weight: 700;
             margin-bottom: 20px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            line-height: 1.2;
         }
 
-        .hero p {
-            font-size: 20px;
+        .hero-subtitle {
+            font-size: 24px;
             margin-bottom: 30px;
             opacity: 0.95;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+            font-weight: 300;
+        }
+
+        .hero-features {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .hero-feature {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 18px;
         }
 
         .hero-cta {
             display: flex;
             gap: 20px;
             justify-content: center;
-            margin-top: 30px;
+            flex-wrap: wrap;
         }
 
         .hero-button {
-            padding: 15px 35px;
-            font-size: 18px;
+            padding: 18px 40px;
+            font-size: 20px;
             font-weight: 700;
             border-radius: 5px;
             text-decoration: none;
             transition: all 0.3s;
             display: inline-block;
+            position: relative;
         }
 
         .hero-button-primary {
-            background: #ff6b35;
+            background: #4CAF50;
             color: white;
-            border: 2px solid #ff6b35;
+            border: 2px solid #4CAF50;
+            animation: buttonPulse 2s infinite;
+        }
+
+        @keyframes buttonPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
         }
 
         .hero-button-primary:hover {
-            background: #ff5722;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            background: #45a049;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(76,175,80,0.4);
         }
 
         .hero-button-secondary {
@@ -203,18 +261,69 @@
             color: #2c5530;
         }
 
-        /* Main Content Section */
-        .content-section {
-            padding: 80px 20px;
+        .phone-cta {
+            margin-top: 20px;
+            font-size: 18px;
         }
 
-        .content-section:nth-child(even) {
+        .phone-cta a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 24px;
+        }
+
+        /* Trust Badges Section */
+        .trust-section {
             background: #f8f9fa;
+            padding: 40px 20px;
+            border-bottom: 3px solid #2c5530;
         }
 
-        .container {
+        .trust-container {
             max-width: 1200px;
             margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .trust-badge {
+            text-align: center;
+            flex: 1;
+            min-width: 150px;
+        }
+
+        .trust-icon {
+            width: 60px;
+            height: 60px;
+            background: #2c5530;
+            border-radius: 50%;
+            margin: 0 auto 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: white;
+        }
+
+        .trust-badge h4 {
+            font-size: 16px;
+            color: #2c5530;
+            margin-bottom: 5px;
+        }
+
+        .trust-badge p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Services Section - Enhanced */
+        .services-section {
+            padding: 80px 20px;
+            background: white;
         }
 
         .section-header {
@@ -237,130 +346,301 @@
             line-height: 1.8;
         }
 
-        .content-grid {
+        .services-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-            margin-bottom: 60px;
-        }
-
-        .content-text {
-            padding: 20px;
-        }
-
-        .content-text h3 {
-            font-size: 28px;
-            color: #2c5530;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-
-        .content-text p {
-            font-size: 16px;
-            line-height: 1.8;
-            color: #555;
-            margin-bottom: 20px;
-        }
-
-        .content-image {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-
-        /* Features Grid */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-top: 50px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .feature-card {
+        .service-card {
             background: white;
-            padding: 40px 30px;
+            border: 2px solid #e9ecef;
+            padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            text-align: center;
             transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
         }
 
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            border-color: #4CAF50;
         }
 
-        .feature-icon {
-            width: 60px;
-            height: 60px;
-            background: #2c5530;
-            border-radius: 50%;
-            margin: 0 auto 20px;
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #4CAF50, #2c5530);
+            border-radius: 10px;
+            margin-bottom: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 28px;
+            font-size: 36px;
             color: white;
         }
 
-        .feature-card h3 {
+        .service-card h3 {
             font-size: 22px;
             color: #2c5530;
             margin-bottom: 15px;
             font-weight: 700;
         }
 
-        .feature-card p {
-            font-size: 15px;
-            line-height: 1.6;
-            color: #666;
+        .service-features {
+            list-style: none;
+            margin-top: 15px;
         }
 
-        /* Benefits Section */
-        .benefits-section {
+        .service-features li {
+            padding: 8px 0;
+            color: #666;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .service-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        .service-cta {
+            margin-top: 20px;
+            display: inline-block;
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+        }
+
+        .service-cta:hover {
+            color: #2c5530;
+            text-decoration: underline;
+        }
+
+        /* Why Us Section */
+        .why-us-section {
             background: #2c5530;
             color: white;
             padding: 80px 20px;
         }
 
-        .benefits-grid {
+        .why-us-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 40px;
             margin-top: 50px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .benefit-item {
-            display: flex;
-            gap: 20px;
+        .why-us-item {
+            text-align: center;
         }
 
-        .benefit-icon {
-            flex-shrink: 0;
-            width: 50px;
-            height: 50px;
-            background: rgba(255,255,255,0.2);
+        .why-us-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(255,255,255,0.1);
+            border: 2px solid #4CAF50;
             border-radius: 50%;
+            margin: 0 auto 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 24px;
+            font-size: 32px;
         }
 
-        .benefit-content h4 {
+        .why-us-item h4 {
             font-size: 20px;
             margin-bottom: 10px;
-            color: #90EE90;
+            color: #4CAF50;
         }
 
-        .benefit-content p {
+        .why-us-item p {
             font-size: 15px;
             line-height: 1.6;
             opacity: 0.9;
         }
 
-        /* Form Section */
+        /* Gallery Section */
+        .gallery-section {
+            padding: 80px 20px;
+            background: #f8f9fa;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .before-after {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            position: relative;
+        }
+
+        .before-after img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .before-after .label {
+            position: absolute;
+            top: 10px;
+            padding: 5px 15px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            font-weight: 700;
+            border-radius: 5px;
+        }
+
+        .before-after .before-label {
+            left: 10px;
+        }
+
+        .before-after .after-label {
+            right: 10px;
+        }
+
+        .video-placeholder {
+            background: #000;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            margin-top: 30px;
+            position: relative;
+        }
+
+        .play-button {
+            width: 80px;
+            height: 80px;
+            background: rgba(255,255,255,0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            color: #2c5530;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .play-button:hover {
+            background: white;
+            transform: scale(1.1);
+        }
+
+        .video-title {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        /* Testimonials Section - Enhanced */
+        .testimonials-section {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .testimonial-card {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            position: relative;
+            transition: all 0.3s;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .stars {
+            color: #FFD700;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .testimonial-text:before {
+            content: '"';
+            font-size: 40px;
+            color: #4CAF50;
+            line-height: 0;
+            vertical-align: -15px;
+            margin-right: 5px;
+        }
+
+        .testimonial-text:after {
+            content: '"';
+            font-size: 40px;
+            color: #4CAF50;
+            line-height: 0;
+            vertical-align: -15px;
+            margin-left: 5px;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            color: #2c5530;
+        }
+
+        .testimonial-location {
+            color: #999;
+            font-size: 14px;
+        }
+
+        /* Multi-Step Form Section */
         .form-section {
             background: linear-gradient(135deg, #2c5530 0%, #4a7c4e 100%);
             padding: 80px 20px;
@@ -386,8 +666,48 @@
             margin-bottom: 10px;
         }
 
+        .urgency-text {
+            color: #ff6b35;
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 10px;
+            animation: pulse 2s infinite;
+        }
+
         .form-header p {
             color: #666;
+        }
+
+        .form-steps {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .step {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 10px;
+            font-weight: 700;
+            transition: all 0.3s;
+        }
+
+        .step.active {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .form-step-content {
+            display: none;
+        }
+
+        .form-step-content.active {
+            display: block;
         }
 
         .form-group {
@@ -406,42 +726,92 @@
         .form-group textarea {
             width: 100%;
             padding: 12px;
-            border: 1px solid #ddd;
+            border: 2px solid #e9ecef;
             border-radius: 5px;
             font-size: 16px;
-            transition: border-color 0.3s;
+            transition: all 0.3s;
         }
 
         .form-group input:focus,
         .form-group select:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: #2c5530;
+            border-color: #4CAF50;
         }
 
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
+        .form-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
         }
 
-        .submit-button {
-            width: 100%;
-            padding: 15px;
-            background: #ff6b35;
-            color: white;
+        .form-button {
+            padding: 15px 30px;
             border: none;
             border-radius: 5px;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 700;
             cursor: pointer;
             transition: all 0.3s;
         }
 
-        .submit-button:hover {
-            background: #ff5722;
+        .form-button-back {
+            background: #e9ecef;
+            color: #333;
+        }
+
+        .form-button-back:hover {
+            background: #dee2e6;
+        }
+
+        .form-button-next,
+        .form-button-submit {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .form-button-next:hover,
+        .form-button-submit:hover {
+            background: #45a049;
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(255,107,53,0.3);
+            box-shadow: 0 10px 25px rgba(76,175,80,0.3);
+        }
+
+        /* CTA Sections Throughout */
+        .inline-cta {
+            background: #4CAF50;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 40px 0;
+            box-shadow: 0 10px 25px rgba(76,175,80,0.2);
+        }
+
+        .inline-cta h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .inline-cta p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .inline-cta a {
+            background: white;
+            color: #4CAF50;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .inline-cta a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
         /* Footer */
@@ -455,7 +825,7 @@
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 40px;
             margin-bottom: 40px;
         }
@@ -463,7 +833,7 @@
         .footer-column h3 {
             font-size: 18px;
             margin-bottom: 20px;
-            color: #90EE90;
+            color: #4CAF50;
         }
 
         .footer-column ul {
@@ -481,7 +851,7 @@
         }
 
         .footer-column ul li a:hover {
-            color: #90EE90;
+            color: #4CAF50;
         }
 
         .footer-bottom {
@@ -491,29 +861,25 @@
             color: #999;
         }
 
-        /* Responsive Design */
+        /* Mobile Responsive */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 32px;
             }
 
-            .content-grid {
-                grid-template-columns: 1fr;
+            .hero-subtitle {
+                font-size: 18px;
             }
 
-            .features-grid {
-                grid-template-columns: 1fr;
+            .hero-button {
+                padding: 15px 30px;
+                font-size: 18px;
             }
 
-            .benefits-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-content {
+            .services-grid,
+            .why-us-grid,
+            .gallery-grid,
+            .testimonials-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -524,253 +890,480 @@
             .header-cta {
                 font-size: 14px;
             }
+
+            .trust-container {
+                flex-direction: column;
+            }
+
+            .form-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .form-button {
+                width: 100%;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .before-after {
+                grid-template-columns: 1fr;
+            }
+
+            .before-after img {
+                height: 200px;
+            }
+
+            body {
+                overflow-x: hidden;
+            }
+        }
+
+        /* Click to Call for Mobile */
+        @media (max-width: 768px) {
+            .phone-number,
+            .phone-cta a {
+                pointer-events: auto;
+                cursor: pointer;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Urgency Banner -->
+    <div class="urgency-banner">
+        🔥 10% Off First Cleaning - Offer Ends Soon! 
+        <span class="countdown">Limited Slots Available - Book Before Snow Season!</span>
+    </div>
+
     <!-- Header -->
     <header class="header">
         <div class="header-top">
             <div class="container">
-                <div class="forbes-badge">
-                    <img src="https://gutterguardsamerica.com/wp-content/uploads/2023/04/forbes2023.png" alt="Forbes 2023">
-                    <img src="https://gutterguardsamerica.com/wp-content/uploads/2023/04/forbes2023.png" alt="Forbes 2023">
+                <div class="company-branding">
+                    <div class="company-logo">🏠 Jersey Gutter Magic</div>
                 </div>
                 <div class="company-info">
-                    <div class="company-name">GGA Roofing</div>
                     <div class="tagline">The premier choice for residential roofing, siding, gutters, and gutter guards.</div>
+                    <div class="since-badge">Serving North Jersey Since 1990</div>
                 </div>
             </div>
         </div>
         <nav class="nav-bar">
             <div class="nav-container">
                 <ul class="nav-menu">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Gutter Guards</a></li>
-                    <li><a href="#">Roofing</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
                 <div class="header-cta">
-                    <span class="phone-number">📞 1-800-GUTTERS</span>
-                    <a href="#form" class="cta-button">Get Free Quote</a>
+                    <a href="tel:1-800-GUTTERS" class="phone-number">📞 1-800-GUTTERS</a>
+                    <a href="#form" class="cta-button-header">Get Free Inspection Now</a>
                 </div>
             </div>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Protect Your Home With America's Best Gutter Guards</h1>
-        <p>Professional installation, lifetime warranty, and superior protection for your home</p>
-        <div class="hero-cta">
-            <a href="#form" class="hero-button hero-button-primary">Get Free Estimate</a>
-            <a href="#" class="hero-button hero-button-secondary">View Our Work</a>
-        </div>
-    </section>
-
-    <!-- Main Content -->
-    <section class="content-section">
-        <div class="container">
-            <div class="content-grid">
-                <div class="content-text">
-                    <h3>Why Choose Gutter Guards America?</h3>
-                    <p>Here at Gutter Guards America, we understand that your home is one of the most significant investments you can make. Preserving its structural integrity is essential for maintaining its value and, most importantly, ensuring the safety of your loved ones.</p>
-                    <p>One aspect of home maintenance that is often overlooked is the gutter system. Gutters play a crucial role in diverting water away from the foundation, preventing water damage in your home, and maintaining the overall health of the structure.</p>
-                    <p>To enhance the efficiency and longevity of your rain gutter system, investing in high-quality, clog resistant gutter guards is essential. Not only can a gutter guard installation protect your home from potential damage, but it can also save you time and money in the long run by reducing the need for frequent gutter cleaning.</p>
-                </div>
-                <div>
-                    <img src="https://gutterguardsamerica.com/wp-content/uploads/2023/04/After-2-2-scaled.jpg" alt="Gutter Installation" class="content-image">
-                </div>
+    <!-- Enhanced Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>#1 Gutter Services in North Jersey - Free Quote in 24 Hours!</h1>
+            <p class="hero-subtitle">Protect Your North Jersey Home from Water Damage with Expert Gutter Solutions</p>
+            
+            <div class="hero-features">
+                <div class="hero-feature">✓ Licensed & Insured</div>
+                <div class="hero-feature">✓ Same-Day Service</div>
+                <div class="hero-feature">✓ Lifetime Warranty</div>
             </div>
-
-            <div class="content-grid">
-                <div>
-                    <img src="https://gutterguardsamerica.com/wp-content/uploads/2023/08/gutter-guards-america-2023-june-9-1-1.jpg" alt="Professional Installation" class="content-image">
-                </div>
-                <div class="content-text">
-                    <h3>Professional Installation You Can Trust</h3>
-                    <p>When it comes to choosing the best gutter guards installation company for your home, choose the professionals at Gutter Guards America. We offer a high-quality, state-of-the-art system with exceptional customer service.</p>
-                    <p>With so many different types of rain gutter cover companies available, it can be very overwhelming to decide which gutter guard system is best for your home. Gutter Guards America stands out among the competition due to the cutting-edge patented design and durability of the top-rated gutter guard system, and ease of the installation process.</p>
-                    <p>These gutter guards are designed with advanced technologies and materials that ensure optimal water flow while preventing clogs caused by leaves, debris, and even pests.</p>
-                </div>
+            
+            <div class="hero-cta">
+                <a href="#form" class="hero-button hero-button-primary">Get Your Free Inspection Now</a>
+                <a href="#gallery" class="hero-button hero-button-secondary">View Our Work</a>
+            </div>
+            
+            <div class="phone-cta">
+                Or Call Now: <a href="tel:1-800-GUTTERS">📞 1-800-GUTTERS</a>
             </div>
         </div>
     </section>
 
-    <!-- Roofing Quality Section -->
-    <section class="content-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Experience Unrivaled Roofing Quality</h2>
-                <p class="section-subtitle">Gutter Guards America offers exclusive roofing services, providing meticulous attention to detail and a commitment to excellence in every installation. With a focus on quality and customer satisfaction, Gutter Guards America stands out as a premier choice for roofing solutions near you, ensuring a secure and long-lasting roof.</p>
+    <!-- Trust Badges Section -->
+    <section class="trust-section">
+        <div class="trust-container">
+            <div class="trust-badge">
+                <div class="trust-icon">🛡️</div>
+                <h4>Licensed & Insured</h4>
+                <p>Fully Protected</p>
+            </div>
+            <div class="trust-badge">
+                <div class="trust-icon">⭐</div>
+                <h4>5-Star Rated</h4>
+                <p>500+ Reviews</p>
+            </div>
+            <div class="trust-badge">
+                <div class="trust-icon">🏆</div>
+                <h4>Award Winning</h4>
+                <p>Best in North Jersey</p>
+            </div>
+            <div class="trust-badge">
+                <div class="trust-icon">✅</div>
+                <h4>Satisfaction Guaranteed</h4>
+                <p>100% No-Risk</p>
+            </div>
+            <div class="trust-badge">
+                <div class="trust-icon">🏠</div>
+                <h4>Local Experts</h4>
+                <p>Serving Since 1990</p>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="content-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">The Superior Alternative to Other Micro-Mesh Gutter Guard Systems</h2>
-                <p class="section-subtitle">The best gutter guards are constructed from materials that can withstand harsh weather conditions, avoid blockage, and resist rust and corrosion. Our gutter guards installation company offers the best for our customers:</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🛡️</div>
-                    <h3>Stainless Steel Mesh</h3>
-                    <p>While some other micro-mesh gutter covers are made with plastic mesh that corrodes over time, we use stainless steel for a lightweight solution that won't rust, making them your ideal choice for a gutter cover installation.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🏆</div>
-                    <h3>Award-Winning Design</h3>
-                    <p>Unlike other micro-mesh systems, the patented, award-winning design captures more water and eliminates leaf and debris build up, allowing your gutters to keep rainwater away from your foundation.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">✅</div>
-                    <h3>Lifetime Warranty</h3>
-                    <p>Built in the U.S.A., this gutter guard system comes with a lifetime transferable warranty and a no clog guarantee. You will have peace of mind knowing your gutters are protected against clogs for the lifetime of the home.</p>
-                </div>
-            </div>
-            <p style="text-align: center; margin-top: 40px; font-size: 18px; font-weight: 700; color: #2c5530;">
-                Your home is too precious to risk doing business with just any gutter guard installation company. Choose the Best Micro-Mesh Gutter Guard System Today!
-            </p>
-        </div>
-    </section>
-
-    <!-- Benefits Section -->
-    <section class="benefits-section">
+    <!-- Enhanced Services Section -->
+    <section class="services-section" id="services">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title" style="color: white;">Prevent Damage With the #1 Gutter Guard System in America</h2>
-                <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Gutter Guards America has decades of experience protecting homes with their superior product. With this one-of-a-kind design, you can prevent damages that are common with unprotected gutters.</p>
+                <h2 class="section-title">Our Professional Gutter Services</h2>
+                <p class="section-subtitle">Comprehensive solutions designed specifically for North Jersey weather conditions</p>
             </div>
-            <div class="benefits-grid">
-                <div class="benefit-item">
-                    <div class="benefit-icon">💧</div>
-                    <div class="benefit-content">
-                        <h4>Prevent Water Damage</h4>
-                        <p>Without the proper gutter guard installation, debris buildup or ice dams can stop water from properly flowing through your gutter system. This can cause the water to overflow onto your roof and cause leaks inside your home.</p>
-                    </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">💧</div>
+                    <h3>Seamless Gutter Installation</h3>
+                    <p>Custom-fit gutters that handle heavy NJ rains and snow</p>
+                    <ul class="service-features">
+                        <li>Handles heavy NJ rainfall</li>
+                        <li>Custom color matching</li>
+                        <li>No-leak guarantee</li>
+                        <li>25-year warranty</li>
+                    </ul>
+                    <a href="#form" class="service-cta">Get Free Quote →</a>
                 </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">🔥</div>
-                    <div class="benefit-content">
-                        <h4>Remove Fire Hazards</h4>
-                        <p>A buildup of dry leaves in your gutter system puts your home at risk. A single ember from a firework, adjacent campfire, or nearby brushfire can ignite the leaves and put your home and family in grave danger.</p>
-                    </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🧹</div>
+                    <h3>Professional Gutter Cleaning</h3>
+                    <p>Complete debris removal and system inspection</p>
+                    <ul class="service-features">
+                        <li>Full debris removal</li>
+                        <li>Downspout flushing</li>
+                        <li>Free inspection included</li>
+                        <li>Before/after photos</li>
+                    </ul>
+                    <a href="#form" class="service-cta">Schedule Service →</a>
                 </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">🐛</div>
-                    <div class="benefit-content">
-                        <h4>Block Pest Infestations</h4>
-                        <p>The right gutter guard company can help keep your home safe from pests. Insects, mice, birds, bats, and other pests can no longer nest in your gutters. Additionally, a gutter cover installation can help block these pests from crawling into your roof structure.</p>
-                    </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🛡️</div>
+                    <h3>Gutter Guard Systems</h3>
+                    <p>Premium protection against clogs and overflow</p>
+                    <ul class="service-features">
+                        <li>Micro-mesh technology</li>
+                        <li>No-clog guarantee</li>
+                        <li>Pest prevention</li>
+                        <li>Lifetime warranty</li>
+                    </ul>
+                    <a href="#form" class="service-cta">Learn More →</a>
                 </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">🏠</div>
-                    <div class="benefit-content">
-                        <h4>Limit Structural Damage</h4>
-                        <p>When water overflows from your gutters, it can seep between your roof boards and cause leaks inside of your home. If the leaks go undetected and either pool in your attic or drip down the wall frames, the rot and damage can cause devastating results.</p>
-                    </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Gutter Repair & Maintenance</h3>
+                    <p>Fast fixes for leaks, sags, and damage</p>
+                    <ul class="service-features">
+                        <li>Same-day emergency service</li>
+                        <li>Leak sealing</li>
+                        <li>Hanger replacement</li>
+                        <li>Pitch adjustment</li>
+                    </ul>
+                    <a href="#form" class="service-cta">Get Help Now →</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🏠</div>
+                    <h3>Complete Roofing Services</h3>
+                    <p>Full roof installation and repair services</p>
+                    <ul class="service-features">
+                        <li>Shingle replacement</li>
+                        <li>Leak detection</li>
+                        <li>Storm damage repair</li>
+                        <li>Insurance assistance</li>
+                    </ul>
+                    <a href="#form" class="service-cta">Get Inspection →</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">❄️</div>
+                    <h3>Winter Protection</h3>
+                    <p>Prepare for harsh NJ winters</p>
+                    <ul class="service-features">
+                        <li>Ice dam prevention</li>
+                        <li>Heat cable installation</li>
+                        <li>Snow load assessment</li>
+                        <li>Emergency response</li>
+                    </ul>
+                    <a href="#form" class="service-cta">Winter-Proof Now →</a>
                 </div>
             </div>
-            <p style="text-align: center; margin-top: 40px; color: white;">
-                With the right gutter guards in place, you can enjoy peace of mind knowing that your home is well-protected and that your gutter system is functioning efficiently and effectively.
-            </p>
+
+            <!-- Inline CTA -->
+            <div class="inline-cta">
+                <h3>Ready to Protect Your Home?</h3>
+                <p>Limited appointments available this week!</p>
+                <a href="tel:1-800-GUTTERS">📞 Call Now: 1-800-GUTTERS</a>
+            </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="content-section">
+    <!-- Why Choose Us Section -->
+    <section class="why-us-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Testimonials</h2>
-                <p class="section-subtitle">See what our satisfied customers have to say about their experience with Gutter Guards America</p>
+                <h2 class="section-title" style="color: white;">Why Jersey Gutter Magic?</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">The benefits that set us apart from the competition</p>
+            </div>
+            
+            <div class="why-us-grid">
+                <div class="why-us-item">
+                    <div class="why-us-icon">🏆</div>
+                    <h4>Lifetime Warranty</h4>
+                    <p>Transferable warranty that protects your investment for life</p>
+                </div>
+                <div class="why-us-item">
+                    <div class="why-us-icon">🚫</div>
+                    <h4>No-Clog Guarantee</h4>
+                    <p>We'll clean your gutters free if they ever clog with our guards</p>
+                </div>
+                <div class="why-us-item">
+                    <div class="why-us-icon">👷</div>
+                    <h4>Certified Installers</h4>
+                    <p>Factory-trained professionals with 10+ years experience</p>
+                </div>
+                <div class="why-us-item">
+                    <div class="why-us-icon">💰</div>
+                    <h4>Best Price Guarantee</h4>
+                    <p>We'll beat any written quote from a licensed competitor</p>
+                </div>
+                <div class="why-us-item">
+                    <div class="why-us-icon">📅</div>
+                    <h4>Same-Day Service</h4>
+                    <p>Emergency repairs and cleaning available 7 days a week</p>
+                </div>
+                <div class="why-us-item">
+                    <div class="why-us-icon">🌟</div>
+                    <h4>Local Reputation</h4>
+                    <p>Trusted by North Jersey homeowners for over 30 years</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Form Section -->
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Work in North Jersey</h2>
+                <p class="section-subtitle">Before and after transformations from Newark to Jersey City</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="before-after">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400" alt="Before gutter cleaning">
+                        <img src="https://images.unsplash.com/photo-1565538420870-da08ff96a207?w=400" alt="After gutter cleaning">
+                        <span class="label before-label">BEFORE</span>
+                        <span class="label after-label">AFTER</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="before-after">
+                        <img src="https://images.unsplash.com/photo-1625597942012-e5ec51c71b16?w=400" alt="Before gutter installation">
+                        <img src="https://images.unsplash.com/photo-1632323187172-6f4c0c944d25?w=400" alt="After gutter installation">
+                        <span class="label before-label">BEFORE</span>
+                        <span class="label after-label">AFTER</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="before-after">
+                        <img src="https://images.unsplash.com/photo-1621873495914-aa5b18c7e678?w=400" alt="Before repair">
+                        <img src="https://images.unsplash.com/photo-1625948515291-69613efd103f?w=400" alt="After repair">
+                        <span class="label before-label">BEFORE</span>
+                        <span class="label after-label">AFTER</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="before-after">
+                        <img src="https://images.unsplash.com/photo-1609758239871-06f0b308b547?w=400" alt="Before guard installation">
+                        <img src="https://images.unsplash.com/photo-1632829759421-3d5c60cc5e98?w=400" alt="After guard installation">
+                        <span class="label before-label">BEFORE</span>
+                        <span class="label after-label">AFTER</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="video-placeholder">
+                <div class="play-button">▶</div>
+                <div class="video-title">Watch Our Team in Action</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Testimonials Section -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What Our North Jersey Customers Say</h2>
+                <p class="section-subtitle">Real reviews from real homeowners</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">Fixed my clogs fast! The team was professional, on time, and cleaned up everything. My gutters work perfectly now even in heavy rain.</p>
+                    <div class="testimonial-author">John D.</div>
+                    <div class="testimonial-location">Newark, NJ</div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">Best gutter service in North Jersey! They installed new seamless gutters and guards. Haven't had to clean them once in 2 years!</p>
+                    <div class="testimonial-author">Maria S.</div>
+                    <div class="testimonial-location">Jersey City, NJ</div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">Emergency repair during a storm - they came within 2 hours! Saved my basement from flooding. True professionals.</p>
+                    <div class="testimonial-author">Robert M.</div>
+                    <div class="testimonial-location">Hoboken, NJ</div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">The lifetime warranty is real! Had a small issue after 3 years and they fixed it free. Outstanding customer service.</p>
+                    <div class="testimonial-author">Sarah L.</div>
+                    <div class="testimonial-location">Paterson, NJ</div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">Jersey Gutter Magic transformed our home! New gutters look amazing and work perfectly. Fair pricing and excellent work.</p>
+                    <div class="testimonial-author">Michael T.</div>
+                    <div class="testimonial-location">Elizabeth, NJ</div>
+                </div>
+            </div>
+
+            <!-- Another Inline CTA -->
+            <div class="inline-cta">
+                <h3>Join Our 500+ Happy Customers!</h3>
+                <p>Get your free inspection today - no obligation!</p>
+                <a href="#form">Get Started Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Multi-Step Form Section -->
     <section class="form-section" id="form">
         <div class="form-container">
             <div class="form-header">
-                <h2>Get Your Free Estimate</h2>
-                <p>Contact Gutter Guards America to learn more about how a gutter guard installation can protect your home.</p>
+                <div class="urgency-text">⚠️ Limited Slots Available - Book Before Snow Season!</div>
+                <h2>Get Your Free Inspection</h2>
+                <p>Complete in 30 seconds - Get quote in 24 hours</p>
             </div>
-            <div class="form-group form-row">
+            
+            <div class="form-steps">
+                <div class="step active" id="step1-indicator">1</div>
+                <div class="step" id="step2-indicator">2</div>
+            </div>
+            
+            <!-- Step 1 -->
+            <div class="form-step-content active" id="step1">
                 <div class="form-group">
                     <label>First Name *</label>
-                    <input type="text" required>
+                    <input type="text" required placeholder="John">
                 </div>
                 <div class="form-group">
                     <label>Last Name *</label>
-                    <input type="text" required>
+                    <input type="text" required placeholder="Smith">
+                </div>
+                <div class="form-group">
+                    <label>Email Address *</label>
+                    <input type="email" required placeholder="john@example.com">
+                </div>
+                <div class="form-group">
+                    <label>Phone Number *</label>
+                    <input type="tel" required placeholder="(201) 555-0123">
+                </div>
+                <div class="form-buttons">
+                    <div></div>
+                    <button type="button" class="form-button form-button-next" onclick="showStep2()">Next Step →</button>
                 </div>
             </div>
-            <div class="form-group">
-                <label>Email Address *</label>
-                <input type="email" required>
-            </div>
-            <div class="form-group">
-                <label>Phone Number *</label>
-                <input type="tel" required>
-            </div>
-            <div class="form-group">
-                <label>Address</label>
-                <input type="text">
-            </div>
-            <div class="form-group form-row">
+            
+            <!-- Step 2 -->
+            <div class="form-step-content" id="step2">
+                <div class="form-group">
+                    <label>Street Address</label>
+                    <input type="text" placeholder="123 Main St">
+                </div>
                 <div class="form-group">
                     <label>City</label>
-                    <input type="text">
+                    <input type="text" placeholder="Newark">
                 </div>
                 <div class="form-group">
-                    <label>State</label>
-                    <select>
-                        <option>Select State</option>
-                        <option>Alabama</option>
-                        <option>Alaska</option>
-                        <option>Arizona</option>
-                        <option>Arkansas</option>
-                        <option>California</option>
-                        <!-- Add all states -->
+                    <label>Zip Code</label>
+                    <input type="text" placeholder="07101">
+                </div>
+                <div class="form-group">
+                    <label>Service Needed *</label>
+                    <select required>
+                        <option>Select Service</option>
+                        <option>Gutter Cleaning</option>
+                        <option>Gutter Installation</option>
+                        <option>Gutter Guards</option>
+                        <option>Gutter Repair</option>
+                        <option>Free Inspection</option>
+                        <option>Emergency Service</option>
                     </select>
                 </div>
+                <div class="form-group">
+                    <label>Best Time to Call</label>
+                    <select>
+                        <option>Morning (8am-12pm)</option>
+                        <option>Afternoon (12pm-5pm)</option>
+                        <option>Evening (5pm-8pm)</option>
+                        <option>ASAP - Emergency</option>
+                    </select>
+                </div>
+                <div class="form-buttons">
+                    <button type="button" class="form-button form-button-back" onclick="showStep1()">← Back</button>
+                    <button type="submit" class="form-button form-button-submit">Get My Free Quote</button>
+                </div>
             </div>
-            <div class="form-group">
-                <label>Zip Code</label>
-                <input type="text">
-            </div>
-            <div class="form-group">
-                <label>Service Needed</label>
-                <select>
-                    <option>Select Service</option>
-                    <option>Gutter Guards Installation</option>
-                    <option>Gutter Cleaning</option>
-                    <option>Gutter Repair</option>
-                    <option>Roofing Services</option>
-                    <option>Free Inspection</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label>Message</label>
-                <textarea rows="4" placeholder="Tell us about your project..."></textarea>
-            </div>
-            <button type="submit" class="submit-button">Get My Free Estimate</button>
         </div>
     </section>
 
     <!-- Final CTA Section -->
-    <section class="content-section">
+    <section class="services-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Choose the Award-Winning Gutter Guards Installation Company - Gutter Guards America</h2>
-                <p class="section-subtitle">At Gutter Guards America, we strive to not only provide high-quality products but also exceptional customer service and support. This includes offering a lifetime transferable warranty, replacing or cleaning your current gutters during a gutter guard installation, and ensuring that any defects or issues are addressed promptly and professionally. Our team of skilled and experienced professionals can guide and assist you during the installation process, ensuring that your gutter guards are installed correctly, function efficiently, and last a lifetime.</p>
+                <h2 class="section-title">Why Jersey Gutter Magic is North Jersey's #1 Choice</h2>
+                <p class="section-subtitle">At Jersey Gutter Magic, we strive to not only provide high-quality products but also exceptional customer service and support. This includes offering a lifetime transferable warranty, replacing or cleaning your current gutters during installation, and ensuring that any defects or issues are addressed promptly and professionally. Our team of skilled and experienced professionals can guide and assist you during the installation process, ensuring that your gutter guards are installed correctly, function efficiently, and last a lifetime.</p>
                 <p style="text-align: center; margin-top: 30px; font-size: 20px; font-weight: 700; color: #2c5530;">
-                    Call Gutter Guards America and protect your home and loved ones with an award-winning, superior system today!
+                    Call Jersey Gutter Magic and protect your home and loved ones with an award-winning, superior system today!
                 </p>
+            </div>
+            
+            <!-- Final CTA -->
+            <div class="inline-cta">
+                <h3>Don't Wait Until It's Too Late!</h3>
+                <p>Winter is coming - Protect your home now!</p>
+                <a href="tel:1-800-GUTTERS">📞 Call Now: 1-800-GUTTERS</a>
             </div>
         </div>
     </section>
@@ -779,12 +1372,25 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-column">
-                <h3>Services</h3>
+                <h3>Our Services</h3>
                 <ul>
+                    <li><a href="#">Seamless Gutters</a></li>
                     <li><a href="#">Gutter Guards</a></li>
-                    <li><a href="#">Gutter Installation</a></li>
                     <li><a href="#">Gutter Cleaning</a></li>
+                    <li><a href="#">Gutter Repair</a></li>
                     <li><a href="#">Roofing Services</a></li>
+                    <li><a href="#">Emergency Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Service Areas</h3>
+                <ul>
+                    <li><a href="#">Newark</a></li>
+                    <li><a href="#">Jersey City</a></li>
+                    <li><a href="#">Paterson</a></li>
+                    <li><a href="#">Elizabeth</a></li>
+                    <li><a href="#">Hoboken</a></li>
+                    <li><a href="#">All North Jersey</a></li>
                 </ul>
             </div>
             <div class="footer-column">
@@ -792,32 +1398,58 @@
                 <ul>
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">Our Process</a></li>
-                    <li><a href="#">Warranty</a></li>
+                    <li><a href="#">Warranty Info</a></li>
                     <li><a href="#">Testimonials</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Resources</h3>
-                <ul>
+                    <li><a href="#">Careers</a></li>
                     <li><a href="#">Blog</a></li>
-                    <li><a href="#">FAQs</a></li>
-                    <li><a href="#">Maintenance Tips</a></li>
-                    <li><a href="#">Gallery</a></li>
                 </ul>
             </div>
             <div class="footer-column">
-                <h3>Contact</h3>
+                <h3>Contact Jersey Gutter Magic</h3>
                 <ul>
                     <li>📞 1-800-GUTTERS</li>
-                    <li>✉️ info@gutterguardsamerica.com</li>
-                    <li>📍 Nationwide Service</li>
-                    <li>🕒 Mon-Sat: 8AM-6PM</li>
+                    <li>✉️ info@jerseyguttermagic.com</li>
+                    <li>📍 Serving All North Jersey</li>
+                    <li>🕒 Mon-Sat: 7AM-8PM</li>
+                    <li>🕒 Sun: Emergency Only</li>
+                    <li>⭐ Licensed & Insured</li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 Gutter Guards America. All rights reserved. | Privacy Policy | Terms of Service</p>
+            <p>&copy; 2025 Jersey Gutter Magic. All rights reserved. | Serving North Jersey Since 1990 | Privacy Policy | Terms of Service</p>
         </div>
     </footer>
+
+    <script>
+        // Multi-step form functionality
+        function showStep2() {
+            document.getElementById('step1').classList.remove('active');
+            document.getElementById('step2').classList.add('active');
+            document.getElementById('step1-indicator').classList.remove('active');
+            document.getElementById('step2-indicator').classList.add('active');
+        }
+
+        function showStep1() {
+            document.getElementById('step2').classList.remove('active');
+            document.getElementById('step1').classList.add('active');
+            document.getElementById('step2-indicator').classList.remove('active');
+            document.getElementById('step1-indicator').classList.add('active');
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
